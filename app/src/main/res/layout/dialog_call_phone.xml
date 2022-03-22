@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:orientation="vertical"
+    android:paddingBottom="21dp">
+    <LinearLayout
+        android:id="@+id/open"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_101"
+        android:background="@drawable/view_16white"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/call"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_weight="1"
+            android:text="Call"
+            android:textSize="@dimen/sp_15"
+            android:textColor="#1E1F20"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F6F6F6"/>
+        <TextView
+            android:id="@+id/copy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_weight="1"
+            android:text="Copy"
+            android:textSize="@dimen/sp_15"
+            android:textColor="#1E1F20"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/close"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textColor="#9393AA"
+        android:background="@drawable/view_16white"/>
+</LinearLayout>

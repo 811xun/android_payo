@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingRight="@dimen/dp_23">
+
+    <ImageView
+        android:id="@+id/id_back"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_23"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingBottom="@dimen/dp_10"
+        android:src="@mipmap/back_icon" />
+
+    <TextView
+        android:id="@+id/tv_payo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_back"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:layout_marginTop="25dp"
+
+        android:text="Enter verification code"
+        android:textColor="@color/black"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/tv_show_phoneno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_payo"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="Sent to +61 430 111 111"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_17" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_show_phoneno"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:layout_marginTop="44dp"
+
+        android:hint="Verification code"
+        app:hintTextAppearance="@style/box">
+
+        <com.home.glx.uwallet.tools.ChangeLineEdittext
+            android:id="@+id/et_yzm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_52"
+            android:background="@drawable/edt_bg_un_selected"
+            android:inputType="number"
+            android:maxLength="6"
+            android:paddingLeft="0dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textColorHint="#717171"
+            android:textSize="17sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/show_daojishi"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_below="@+id/til_account"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:layout_marginTop="@dimen/dp_15"
+
+        android:text="Resend code in 20s"
+        android:textColor="@android:color/black"
+
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@+id/resend"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_below="@+id/til_account"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="Resend code"        android:layout_marginLeft="@dimen/dp_23"
+
+        android:textColor="@color/end_orange"
+        android:textSize="@dimen/sp_17"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_53"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:layout_marginTop="70dp"
+
+        android:layout_marginBottom="50dp">
+
+        <Button
+            android:id="@+id/btn_get_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_53"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/btn_hui_jianbian"
+            android:gravity="center"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_53"
+        android:layout_alignTop="@+id/rl"
+        android:layout_alignBottom="@+id/rl"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/waiting_icon_hui" />
+    </RelativeLayout>
+
+</RelativeLayout>

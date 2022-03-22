@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.MapActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Discover nearby"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/black"
+        android:gravity="center" />
+
+    <ImageView
+        android:id="@+id/id_back"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="0dp"
+        android:scaleType="center"
+        android:src="@mipmap/back_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:layout_width="@dimen/dp_13"
+        android:layout_height="@dimen/dp_10"
+        app:layout_constraintStart_toStartOf="@+id/open_list"
+        app:layout_constraintTop_toTopOf="@+id/open_list"
+        android:src="@mipmap/map_list_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/open_list" />
+
+
+    <TextView
+        android:id="@+id/open_list"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_50"
+        android:text="List"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/pay_text_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_22"
+        app:layout_constraintBottom_toBottomOf="@+id/title" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/fl"></FrameLayout>
+
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_47"
+        android:hint="Search restaurants"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:paddingLeft="@dimen/dp_55"
+        android:paddingRight="@dimen/dp_32"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintStart_toStartOf="@id/fl"
+        app:layout_constraintEnd_toEndOf="@id/fl"
+        app:layout_constraintTop_toTopOf="@id/fl"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:background="@drawable/view_20white" />
+
+    <ImageView
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:src="@mipmap/search_icon2"
+        app:layout_constraintStart_toStartOf="@id/search"
+        app:layout_constraintTop_toTopOf="@id/search"
+        app:layout_constraintBottom_toBottomOf="@id/search"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_10" />
+</androidx.constraintlayout.widget.ConstraintLayout>

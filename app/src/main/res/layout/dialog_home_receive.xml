@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="36dp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:src="@mipmap/close_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="center"/>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="136dp"
+        android:layout_height="148dp"
+        android:src="@mipmap/home_receive_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="45dp"/>
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/colorBackGround"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text=""
+        android:textSize="@dimen/sp_22"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_marginTop="142dp"
+        app:layout_constraintTop_toTopOf="@+id/img"/>
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/money"
+        android:text=""
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/black"
+        android:layout_marginTop="26dp"
+        android:layout_marginHorizontal="@dimen/dp_16"/>
+
+    <TextView
+        android:id="@+id/share"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/view_yj_m22orange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info"
+        android:layout_marginHorizontal="@dimen/dp_24"
+        android:text="Share &amp; Earn More"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14"
+        android:gravity="center"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

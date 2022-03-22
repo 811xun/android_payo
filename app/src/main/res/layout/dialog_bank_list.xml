@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/confirm_pay_bottom_background"
+    android:orientation="vertical"
+    android:paddingBottom="24dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_marginTop="32dp"
+        android:id="@+id/instalment_flag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/dismiss"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="center"
+                android:src="@mipmap/back_b"/>
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:id="@+id/instalment_num"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank Card list"
+                android:textColor="#322B1E"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <ListView
+            android:id="@+id/card_list"
+            android:layout_marginTop="16dp"
+            android:divider="@null"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_height="43dp"
+        android:background="@drawable/view_yj_mcheng"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="@color/text_orange"
+        android:textSize="18sp"/>
+</LinearLayout>

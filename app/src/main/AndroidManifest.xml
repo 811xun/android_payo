@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.home.glx.uwallet">
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+
+        <activity android:name=".activity.xzc.LoginActivity_inputNumber" />
+        <activity
+            android:name=".activity.StartActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="payoemailtrack.onelink.me"
+                    android:pathPrefix="/nmGI"
+                    android:scheme="https" />
+            </intent-filter>
+
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="mediacampa.onelink.me"
+                    android:pathPrefix="/g2dd"
+                    android:scheme="https" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="payosocialmedia.onelink.me"
+                    android:pathPrefix="/iUUQ"
+                    android:scheme="https" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="payovenueactivation.onelink.me"
+                    android:pathPrefix="/doYV"
+                    android:scheme="https" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="payosms.onelink.me"
+                    android:pathPrefix="/sud8"
+                    android:scheme="https" />
+            </intent-filter>
+
+            <!--https://idpr.onelink.me/h6kT/iDPR-->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="idpr.onelink.me"
+                    android:pathPrefix="/h6kT"
+                    android:scheme="https" />
+            </intent-filter>
+
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="payoappreview.onelink.me"
+                    android:pathPrefix="/KMo0"
+                    android:scheme="https" />
+            </intent-filter>
+
+
+            <!--https://​​payovenueactivation.onelink.me-->
+            <!--<intent-filter android:autoVerify="true">-->
+            <!--<action android:name="android.intent.action.VIEW" />-->
+
+            <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--<category android:name="android.intent.category.BROWSABLE" />-->
+
+            <!--<data-->
+            <!--android:host="payovenueactivation.onelink.me"-->
+            <!--android:scheme="https" />-->
+            <!--</intent-filter>-->
+
+
+            <intent-filter>
+
+                <!-- 必须设置 -->
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- 如果需要外部网页打开本页面，还需要设置这个 -->
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="uwallet" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="mainactivity"
+                    android:scheme="afshopapp" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="invite.payo.com.au"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="nfc.payo.com.au"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="nfc.payo.com.au"
+                    android:scheme="https" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="qrcode.payo.com.au"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="qrcode.payo.com.au"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <!--银联支付-->
+        <!--<activity-->
+        <!--android:name="com.unionpay.uppay.PayActivity"-->
+        <!--android:configChanges="orientation|keyboardHidden"-->
+        <!--android:excludeFromRecents="true"-->
+        <!--android:label="@string/app_name"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:windowSoftInputMode="adjustResize" />-->
+        <!--<activity-->
+        <!--android:name="com.unionpay.UPPayWapActivity"-->
+        <!--android:configChanges="orientation|keyboardHidden"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:windowSoftInputMode="adjustResize" />-->
+        <!--分期付等待页-->
+        <activity android:name=".activity.InstalWaitingActivity"></activity>
+        <!--新引导页-->
+        <activity android:name=".activity.NewGuideActivity" />
+        <activity android:name=".activity.LateFeeRecordDetailActivity" />
+        <!--还款成功页-->
+        <activity android:name=".activity.RepaySuccessActivity" />
+        <!--还款确认页-->
+        <activity android:name=".activity.InstalmentPendingNextActivity" />
+        <!--支付失败页-->
+        <activity android:name=".activity.PayFailedActivity" />
+        <!--支付成功页-->
+        <activity android:name=".activity.PaySuccessActivity" />
+        <!--支付确认页-->
+        <activity android:name=".activity.ConfirmPayNextActivity" />
+        <!--支付时分期付还款计划页-->
+        <!--确认支付金额页-->
+        <activity
+            android:name=".activity.ConfirmPayActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!--支付选卡页-->
+        <activity android:name=".activity.SelectBankCardActivity" />
+        <!--设置PIN页-->
+        <activity android:name=".activity.SetNewPinActivity" />
+        <!--选择部分订单还款结果页-->
+        <activity android:name=".activity.RepaySelectResultActivity" />
+        <!--还款结果页-->
+        <activity android:name=".activity.RepayResultActivity" />
+        <!--还款确认金额页-->
+        <activity android:name=".activity.InstalmentPendingDetailsActivity" />
+        <!--多笔订单还款确认页-->
+        <!--订单详情页-->
+        <activity android:name=".activity.RecordDetailActivity" />
+        <!--地图切换列表页-->
+        <activity android:name=".activity.MapListActivity" />
+        <!--搜索商户结果页-->
+        <activity android:name=".activity.SearchMerchatDataActivity" />
+        <!--首页view all页面-->
+        <activity android:name=".activity.ViewAllActivity" />
+        <!--banner自定义跳转页面-->
+        <activity android:name=".activity.BannerClickActivity" />
+        <!--地图页-->
+        <activity android:name=".activity.MapActivity" />
+        <!--关于我们页-->
+        <activity android:name=".activity.AboutActivity" />
+        <!--收藏列表页-->
+        <activity android:name=".activity.FavoriteListActivity" />
+        <!--营销码获取记录-->
+        <!--分享页-->
+        <activity android:name=".activity.ShareNextActivity" />
+        <!--修改登陆密码页-->
+        <!--修改邮箱页-->
+        <activity android:name=".activity.ChangeEmailActivity" />
+        <!--卡详情页-->
+        <activity android:name=".activity.CardDetailActivity" />
+        <!--修改电话页-->
+        <activity android:name=".activity.ChangePhoneNumActivity" />
+        <!--用户信息页-->
+        <activity android:name=".activity.UserMsgActivity" /> <!-- <uses-library -->
+        <!-- android:name="org.apache.http.legacy" -->
+        <!-- android:required="false" /> -->
+        <!--银联支付-->
+        <activity
+            android:name=".fragment.MainTab"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!-- 接收处理push消息 -->
+
+        <!-- 注册页面 -->
+        <!--主页-->
+        <activity android:name=".activity.ShareToEarnActivity" />
+        <!--登录页-->
+        <!--分期付流程图页-->
+        <!--分期付结果-->
+        <activity android:name=".activity.Setting_Activity" />
+        <!--分享页-->
+        <activity android:name=".activity.MessageActivity" />
+        <!--添加卡页面-->
+        <!--设置页-->
+        <activity android:name=".activity.Web_Activity" />
+
+        <!--消息列表页-->
+
+        <activity android:name=".activity.SetPinPwd_Activity" />
+        <!--web页-->
+        <activity
+            android:name=".activity.InputPin_Activity"
+            android:launchMode="singleTop" /> <!-- 微信 -->
+        <!-- 支付宝 -->
+        <activity
+            android:name="com.home.glx.uwallet.activity.xzc.ChooseCardListActivity"
+            android:label=""
+            android:theme="@style/bottom_activity_style" />
+        <!--输入PIN页-->
+        <!--扫描NFC-->
+        <activity android:name=".activity.FenQuBanks_Activity" />
+        <!--营销码-->
+        <activity android:name=".activity.RegistTwo_Activity" /> <!-- 处理NFC的数据及后续跳转 -->
+        <activity android:name=".activity.MessageDetailActivity" />
+        <!-- 处理URL scheme链接 -->
+        <!--注册填写信息页-->
+        <!--忘记密码-->
+        <!--站内信-->
+        <activity android:name=".activity.PdfActivity" />
+        <activity android:name=".activity.AgreementActivity" />
+        <!--卡详情页-->
+        <activity android:name=".activity.SearchMerchantActivity" />
+        <!--PDF页面-->
+        <activity android:name=".activity.SearchMerchantResultActivity" />
+        <!--协议页面-->
+        <activity android:name=".activity.SelectPayTypeActivity" />
+        <!--分享数据-->
+        <activity android:name=".activity.BankCardListActivity" />
+        <!--搜索商户页-->
+        <!--搜索商户结果页-->
+        <activity android:name=".activity.PayMoneyActivity" />
+        <!--商户详情页-->
+        <!--注册时二选一-->
+        <!--卡列表页-->
+        <!--交易详情页-->
+        <activity android:name=".activity.NewMerchantInfoActivity" />
+        <!--输入金额页-->
+        <!--支付结果页-->
+        <activity
+            android:name=".activity.ChooseIllionActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!--支付等待页-->
+        <activity
+            android:name=".activity.ChooseIllionSearchActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!--添加卡页面-->
+        <activity android:name=".activity.KycAndIllionResultActivity" />
+        <!--商户详情页-->
+        <activity android:name=".activity.IllionDetailActivity" />
+        <!--卡列表页-->
+        <activity android:name=".activity.IllionSecondYanzhengDetailActivity" />
+        <!--选择ILLION机构-->
+        <activity android:name=".activity.NewAddBankCardActivity" />
+        <activity android:name=".activity.ViewMoreActivity" />
+        <!--分期付开通失败、人审-->
+        <activity
+            android:name=".activity.xzc.LoginActivity_inputYzm"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_yu"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <!--分期付等待页-->
+        <!--ILLION填写-->
+        <activity android:name=".activity.xzc.KycActivity_first_IDTypeChoose" />
+        <!--ILLION二次验证填写-->
+        <activity android:name=".activity.xzc.KycActivity_second_AddressChoose" />
+        <!--引导页-->
+        <!--添加卡页面-->
+        <activity android:name=".activity.xzc.ChooseCardActivity" />
+
+        <!--首页view more页面-->
+        <activity android:name=".activity.RepayKeyiActivity" />
+        <activity
+            android:name=".activity.xzc.NewAddBankCardActivityDialog"
+            android:label=""
+            android:theme="@style/bottom_activity_style" />
+        <activity android:name=".activity.xzc.promotion.PromotionListActivity" />
+        <activity android:name=".activity.xzc.promotion.Zhifu_PromotionListActivity" />
+        <activity android:name="com.home.glx.uwallet.activity.Zhifu_SelectBankCardActivity" />
+        <!--还款可疑-->
+        <activity android:name="com.home.glx.uwallet.activity.xzc.PaySuccessActivity_Zhifu" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC80QKGvifQBeg6uTmYpNayVAQXrkDTqxk" />
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.home.glx.uwallet.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+      <!--  <receiver
+            android:name="com.appsflyer.SingleInstallBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>-->
+
+        <service android:name="com.braze.push.BrazeFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".push.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <uses-library
+            android:name="org.simalliance.openmobileapi"
+            android:required="false" />
+    </application>
+    <uses-feature android:name="android.hardware.nfc.hce" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 调用华为地图服务能力 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许程序通过WiFi或移动基站的方式获取用户粗略的经纬度信息 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 允许程序通过GPS芯片接收卫星的定位信息 -->
+    <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA" />
+
+    <uses-sdk tools:overrideLibrary="com.google.firebase.messaging" />
+
+    <!--
+访问系统媒体文件：Q中引入了一个新定义媒体文件的共享集合，如果要访问沙盒外的媒体共享
+文件，比如照片，音乐，视频等，需要申请新的媒体权限
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--银联支付-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+
+</manifest>

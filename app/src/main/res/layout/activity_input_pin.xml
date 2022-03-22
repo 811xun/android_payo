@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_h"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/id_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@mipmap/back_b" />
+
+        <TextView
+            android:id="@+id/id_title"
+            style="@style/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Your current PIN"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CBCED4" />
+
+    <TextView
+        android:id="@+id/id_faile_num"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/text_orange"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <com.home.glx.uwallet.selfview.PwdEditText
+        android:id="@+id/id_pws_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:visibility="gone"
+        app:backColor="@color/white"
+        app:checkedColor="#d0d0d0"
+        app:isWaitInput="true"
+        app:round="7.5dp"
+        app:space="0dp"
+        app:textLength="6"
+        app:waitInputColor="@color/text_orange" />
+
+    <!--<com.home.glx.uwallet.selfview.SeparatedEditText-->
+    <com.home.glx.uwallet.selfview.PwdEditText_Fenkai
+        android:id="@+id/edit_solid"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="86dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="86dp"
+        android:digits="0123456789"
+        android:inputType="number"
+        app:backColor="@color/white"
+        app:checkedColor="#d0d0d0"
+        app:isWaitInput="true"
+        app:round="7.5dp"
+        app:space="0dp"
+        app:textColor="#717171"
+        app:textLength="4"
+        app:waitInputColor="#707070" />
+
+    <TextView
+        android:id="@+id/forget_pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_30"
+        android:text="Forgot your PIN?"
+        android:textColor="@color/colorBackGround"
+        android:textSize="@dimen/sp_14" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/id_forget_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:text="@string/forget_password"
+            android:textColor="@color/text_color5" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/youjiantou"
+            android:translationY="1dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

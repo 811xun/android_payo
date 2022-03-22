@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:layout_marginTop="7dp"
+    android:background="@drawable/bg"
+    android:paddingTop="12dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="13dp">
+
+    <TextView
+        android:id="@+id/jine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10.00"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/jine"
+        android:layout_alignBottom="@+id/jine"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/date2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jine"
+        android:layout_marginTop="4dp"
+        android:lines="2"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jine"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        android:lines="2"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="11sp" />
+
+</RelativeLayout>

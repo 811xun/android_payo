@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_wai"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/id_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_23"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_25"
+        android:paddingBottom="@dimen/dp_10"
+        android:src="@mipmap/back_icon" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/id_back"
+        android:layout_alignBottom="@+id/id_back"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:paddingLeft="2dp"
+        android:text="Promotion"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/add_pro"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/id_back"
+        android:layout_alignBottom="@+id/id_back"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="17dp"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:text="Enter code"
+        android:textColor="#FD7441"
+        android:textSize="13sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_has_no"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/iv_has_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/invite3" />
+
+        <Button
+            android:id="@+id/invite2"
+            android:layout_width="179dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/iv_has_no"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:background="@mipmap/btn_orange_jianbian"
+            android:gravity="center"
+            android:text="Invite friends"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/invite"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_below="@+id/id_back"
+        android:background="@mipmap/invite"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/iv_invite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Get $20 off your next order"
+            android:textColor="@color/text_orange"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/invite"
+        android:visibility="gone"
+        app:srlAccentColor="@android:color/white"
+        app:srlEnableAutoLoadMore="true"
+        app:srlEnableLoadMore="true"
+        app:srlHeaderInsetStart="-10dp"
+        app:srlPrimaryColor="@color/colorPrimary">
+
+        <com.scwang.smartrefresh.header.MaterialHeader
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.home.glx.uwallet.selfview.DampingReboundNestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/categories_avi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_22"
+                    android:paddingTop="30dp"
+                    android:paddingRight="@dimen/dp_22"
+
+                    android:text="Available vouchers"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_avi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/categories_avi"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="@dimen/dp_18"
+                    android:paddingRight="@dimen/dp_18" />
+
+                <TextView
+                    android:id="@+id/categories_used"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recycler_view_avi"
+                    android:paddingLeft="@dimen/dp_22"
+                    android:paddingTop="30dp"
+                    android:paddingRight="@dimen/dp_22"
+                    android:text="Used &#038; expired"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_used"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/categories_used"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="@dimen/dp_18"
+                    android:paddingBottom="20dp"
+                    android:paddingRight="@dimen/dp_18" />
+            </RelativeLayout>
+        </com.home.glx.uwallet.selfview.DampingReboundNestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>

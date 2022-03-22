@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:scaleType="center"
+        android:src="@mipmap/back_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pay_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_50"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="@dimen/dp_29"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back" />
+
+    <TextView
+        android:id="@+id/pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_16"
+        android:text="Pay"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_4"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/colorBackGround"
+        android:textSize="26sp"
+        app:layout_constraintStart_toEndOf="@+id/pay"
+        app:layout_constraintTop_toTopOf="@+id/pay" />
+
+    <TextView
+        android:id="@+id/merchant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+
+        app:layout_constraintStart_toStartOf="@id/pay"
+        app:layout_constraintTop_toBottomOf="@+id/pay" />
+
+    <TextView
+        android:id="@+id/pin_digit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_76"
+        android:text="Please type in your 4 digit PIN"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/merchant_name" />
+
+    <com.home.glx.uwallet.selfview.PwdEditText_Fenkai
+        android:id="@+id/id_pws_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="86dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="86dp"
+        android:layout_marginBottom="40dp"
+        android:digits="0123456789"
+        android:inputType="number"
+        app:backColor="@color/white"
+        app:checkedColor="#d0d0d0"
+        app:isWaitInput="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pin_digit"
+        app:round="7.5dp"
+        app:space="0dp"
+        app:textColor="#717171"
+        app:textLength="4"
+        app:waitInputColor="#707070">
+
+        <requestFocus />
+    </com.home.glx.uwallet.selfview.PwdEditText_Fenkai>
+
+    <TextView
+        android:id="@+id/forget_pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_50"
+        android:text="Forgot your PIN?"
+        android:textColor="@color/colorBackGround"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_pws_edt" />
+</androidx.constraintlayout.widget.ConstraintLayout>

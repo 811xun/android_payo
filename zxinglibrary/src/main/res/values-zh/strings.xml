@@ -1,0 +1,16 @@
+<resources>
+    <string name="zxing_app_name">Zxing Library</string>
+    <!--zxing-->
+    <string name="msg_camera_framework_bug">相机被占用或没有相机权限，请检查</string>
+    <string name="button_ok">退出</string>
+    <string name="scan_code">扫码支付</string>
+    <string name="open_flash">打开闪光灯</string>
+    <string name="close_flash">关闭闪光灯</string>
+    <string name="gallery">相册</string>
+    <string name="scan_failed_tip">图片解析失败，换个图片试试.</string>
+    <string name="scan_notice">放入框内，自动扫描</string>
+    <string name="qr_code_invalid">二维码不存在</string>
+    <!--    确定-->
+    <string name="z_queding">确定</string>
+    <string name="ins_balance">分期付余额不足以支付当前订单金额.</string>
+</resources>

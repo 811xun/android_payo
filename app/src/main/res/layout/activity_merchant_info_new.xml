@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.home.glx.uwallet.selfview.DampingReboundNestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.youth.banner.Banner
+                android:id="@+id/id_banner"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:image_scale_type="center_crop"
+                app:indicator_drawable_selected="@drawable/view_info_banner_on"
+                app:indicator_drawable_unselected="@drawable/view_info_banner_of"
+                app:indicator_height="10dp"
+                app:indicator_margin="5dp"
+                app:indicator_width="10dp"
+                app:layout_constraintDimensionRatio="1:1.03"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@mipmap/info_backgroudn_color"
+                app:layout_constraintDimensionRatio="1:1.06"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_22"
+                android:layout_marginTop="@dimen/dp_30"
+                android:text=""
+                android:textColor="#FD7441"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_banner" />
+
+            <ImageView
+                android:id="@+id/is_favorite"
+                android:layout_width="@dimen/dp_47"
+                android:layout_height="@dimen/dp_47"
+                android:layout_marginRight="@dimen/dp_13"
+                android:scaleType="center"
+                android:src="@mipmap/not_save_icon"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/add_favorite"
+                app:layout_constraintTop_toBottomOf="@id/limit" />
+
+            <TextView
+                android:id="@+id/merchant_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_22"
+                android:layout_marginTop="@dimen/dp_5"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toStartOf="@+id/is_favorite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/is_favorite" />
+
+            <TextView
+                android:id="@+id/add_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginRight="@dimen/dp_22"
+                android:gravity="center_vertical"
+                android:text="Add to favourites"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_10"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/limit" />
+
+            <TextView
+                android:id="@+id/merchant_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_22"
+                android:layout_marginTop="@dimen/dp_3"
+                android:text=""
+                android:textColor="@color/color_717171"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/merchant_name" />
+
+            <TextView
+                android:id="@+id/merchant_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_22"
+                android:layout_marginTop="@dimen/dp_12"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12"
+                android:lineSpacingExtra="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/merchant_tag" />
+
+            <ImageView
+                android:id="@+id/copy_icon"
+                android:layout_width="11dp"
+                android:layout_height="14dp"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="@dimen/dp_22"
+                android:layout_marginBottom="20dp"
+                android:src="@mipmap/copy_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/copy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/copy" />
+
+            <TextView
+                android:id="@+id/copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:paddingLeft="@dimen/dp_8"
+                android:paddingRight="@dimen/dp_20"
+                android:paddingBottom="@dimen/dp_20"
+                android:text="Copy Location"
+                android:textColor="#FD7441"
+                android:textSize="@dimen/sp_13"
+                app:layout_constraintStart_toEndOf="@+id/copy_icon"
+                app:layout_constraintTop_toBottomOf="@+id/merchant_location" />
+
+            <ImageView
+                android:id="@+id/merchant_location_icon"
+                android:layout_width="10dp"
+                android:layout_height="12dp"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="20dp"
+                android:src="@mipmap/merchant_location_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/copy"
+                app:layout_constraintStart_toEndOf="@+id/copy"
+                app:layout_constraintTop_toTopOf="@+id/copy" />
+
+            <TextView
+                android:id="@+id/get_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:paddingLeft="@dimen/dp_8"
+                android:paddingRight="@dimen/dp_20"
+                android:paddingBottom="@dimen/dp_20"
+                android:text="Get Directions"
+                android:textColor="#FD7441"
+                android:textSize="@dimen/sp_13"
+                app:layout_constraintStart_toEndOf="@+id/merchant_location_icon"
+                app:layout_constraintTop_toBottomOf="@+id/merchant_location" />
+
+            <ImageView
+                android:id="@+id/merchant_call_icon"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="20dp"
+                android:src="@mipmap/merchant_call_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/copy"
+                app:layout_constraintStart_toEndOf="@+id/get_location"
+                app:layout_constraintTop_toTopOf="@+id/copy" />
+
+            <TextView
+                android:id="@+id/call"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:paddingLeft="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_20"
+                android:text="Call"
+                android:textColor="#FD7441"
+                android:textSize="@dimen/sp_13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/merchant_call_icon"
+                app:layout_constraintTop_toBottomOf="@+id/merchant_location" />
+
+            <TextView
+                android:id="@+id/line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#EBEBEB"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/copy" />
+
+            <TextView
+                android:id="@+id/info_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_22"
+                android:layout_marginTop="@dimen/dp_35"
+                android:text="Info"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_23"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/check_pay"
+                android:layout_width="@dimen/dp_137"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginEnd="@dimen/dp_22"
+                android:background="@drawable/merchant_info_btn"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/category"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/pay_with"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_19"
+                    android:text="Pay with"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="@+id/check_pay"
+                    app:layout_constraintStart_toStartOf="@+id/check_pay"
+                    app:layout_constraintTop_toTopOf="@+id/check_pay" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_38"
+                    android:layout_height="@dimen/dp_13"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:src="@mipmap/pay_with_payo"
+                    app:layout_constraintBottom_toBottomOf="@+id/check_pay"
+                    app:layout_constraintStart_toEndOf="@+id/pay_with"
+                    app:layout_constraintTop_toTopOf="@+id/check_pay" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/category_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_22"
+                android:layout_marginTop="@dimen/dp_23"
+                android:text="Category"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/info_title" />
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_22"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textColor="@color/colorBackGround"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/category_text" />
+
+            <TextView
+                android:id="@+id/about_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_22"
+                android:layout_marginTop="@dimen/dp_25"
+                android:text="About"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/category" />
+
+            <com.home.glx.uwallet.selfview.AlignTextView
+                android:id="@+id/introduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_22"
+                android:lineSpacingExtra="7dp"
+                android:paddingBottom="@dimen/dp_70"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:align="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/about_text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/introduction" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.home.glx.uwallet.selfview.DampingReboundNestedScrollView>
+
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:scaleType="center"
+        android:src="@mipmap/back_o"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/pay_btn"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginLeft="@dimen/dp_22"
+        android:layout_marginRight="@dimen/dp_22"
+        android:layout_marginBottom="@dimen/dp_38"
+        android:src="@mipmap/paywithpayo"
+        android:scaleType="center"
+        android:background="@drawable/bg_btn_jianbian_orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

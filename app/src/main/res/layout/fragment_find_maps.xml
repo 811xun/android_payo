@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_h"
+        android:background="@color/white"
+        android:backgroundTint="@color/text_orange">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/Discover_Nearby"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_size" />
+
+        <ImageView
+            android:id="@+id/id_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:scaleType="center"
+            android:src="@mipmap/back_w"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/id_line_model"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingRight="20dp"
+            android:src="@mipmap/map_to_line"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+<!--    <fragment-->
+<!--        android:id="@+id/map"-->
+<!--        android:name="com.google.android.gms.maps.SupportMapFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+
+    <RelativeLayout
+        android:layout_below="@+id/top_rl"
+        android:visibility="gone"
+        android:id="@+id/location_permission"
+        android:background="@color/bj"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36sp"
+                android:text="Oops!"
+                android:textColor="#FF2D2C2A"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FF514E42"
+                android:text="@string/cant_find_location"/>
+            <TextView
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:layout_width="289dp"
+                android:textColor="#FF959BA4"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="@string/please_enable_location"/>
+            <Button
+                android:id="@+id/open_location"
+                android:layout_marginTop="48dp"
+                android:layout_width="111dp"
+                android:layout_height="48dp"
+                android:text="@string/enable_location"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/view_btn_32orange"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.gms.maps.MapView
+            android:visibility="visible"
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        
+        <RelativeLayout
+            android:id="@+id/my_location_btn"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_21"
+            android:background="#80FFFFFF">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/my_location_btn"
+                android:layout_centerInParent="true"
+                android:scaleType="center"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.mxy.fpshadowlayout.FpShadowLayout
+        android:id="@+id/shadow"
+        android:visibility="gone"
+        android:layout_above="@+id/merchant_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        app:fp_round_corner="fp_corner_all"
+        app:fp_shadowColor="#26000000"
+        app:fp_shadowRadius="4dp"
+        app:fp_shadowShape="fp_round_rectangle"
+        app:fp_shadowSide="fp_top">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    </com.mxy.fpshadowlayout.FpShadowLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/merchant_tag"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_126"
+        android:paddingLeft="14dp"
+        android:paddingRight="12dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/map_tag_background">
+        <androidx.cardview.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/img_bg"
+            android:layout_width="@dimen/dp_85"
+            android:layout_height="@dimen/dp_85"
+            app:cardCornerRadius="11dp">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="@dimen/dp_85"
+                android:layout_height="99dp"
+                android:scaleType="center" />
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_16"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/merchant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/img_bg"
+                android:paddingEnd="8dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/categories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/sp_15"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text=""
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/colorBackGround"
+                    android:textSize="@dimen/sp_13" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/dp_9"
+                        android:layout_height="@dimen/dp_13"
+                        android:scaleType="centerInside"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/merchant_street" />
+
+                    <TextView
+                        android:id="@+id/distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:text=""
+                        android:textColor="#A8A8A8"
+                        android:textSize="@dimen/sp_13" />
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/dp_13"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_gravity="center_vertical"
+                        android:background="#A8A8A8"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/tag_ll"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tag1"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="11sp"
+                        android:textColor="#515154"
+                        android:text=""
+                        android:singleLine="true"
+                        android:background="@drawable/view_map_tag_background"/>
+
+                    <TextView
+                        android:id="@+id/tag2"
+                        android:layout_marginLeft="4dp"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="11sp"
+                        android:textColor="#515154"
+                        android:text=""
+                        android:singleLine="true"
+                        android:background="@drawable/view_map_tag_background"/>
+
+                    <TextView
+                        android:id="@+id/tag3"
+                        android:layout_marginLeft="4dp"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="11sp"
+                        android:textColor="#515154"
+                        android:text=""
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:background="@drawable/view_map_tag_background"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/pay_text_gray"
+                    android:textSize="@dimen/sp_13" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/transition_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:singleLine="true"
+            android:layout_alignLeft="@+id/merchant_name"
+            android:layout_below="@+id/merchant_name"
+            android:layout_marginTop="6dp"/>
+
+        <View
+            android:id="@+id/staus_point"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginTop="9dp"
+            android:layout_alignLeft="@+id/merchant_name"
+            android:layout_below="@+id/transition_no" />
+
+        <TextView
+            android:id="@+id/staus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="12sp"
+            android:textColor="#5DE281"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/staus_point"
+            android:layout_below="@+id/transition_no"/>
+
+        <TextView
+            android:id="@+id/transition_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#9796A1"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/staus"
+            android:layout_alignTop="@+id/staus"
+            android:layout_marginLeft="6dp"/>
+    </LinearLayout>
+</RelativeLayout>

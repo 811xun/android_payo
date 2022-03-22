@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.RecordDetailActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:text="Transaction Details"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/id_back"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:scaleType="center"
+        android:src="@mipmap/back_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <com.home.glx.uwallet.selfview.DampingReboundNestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detail_cl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dp_16">
+
+            <TextView
+                android:id="@+id/where"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_55"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_23"
+                android:text="Where"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/merchant_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:minHeight="@dimen/dp_55"
+                android:paddingHorizontal="@dimen/dp_23"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/where"
+                app:layout_constraintTop_toTopOf="@id/where" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/merchant_name" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/instal_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_18"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/merchant_name">
+
+                <TextView
+                    android:id="@+id/all_order_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp_23"
+                    android:paddingTop="@dimen/dp_6"
+                    android:text="Order amount"
+                    android:textColor="@color/pay_text_gray"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/all_order_amount_money"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:paddingHorizontal="@dimen/dp_23"
+                    android:textColor="@color/pay_text_gray"
+                    android:textSize="@dimen/sp_11"
+                    app:layout_constraintBottom_toBottomOf="@+id/all_order_amount"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/all_order_amount"
+                    app:layout_constraintTop_toTopOf="@id/all_order_amount" />
+
+                <TextView
+                    android:id="@+id/promo_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp_23"
+                    android:paddingTop="@dimen/dp_12"
+                    android:text="Promotion"
+                    android:textColor="@color/pay_text_gray"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/all_order_amount" />
+
+                <TextView
+                    android:id="@+id/promo_amount_money"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:paddingHorizontal="@dimen/dp_23"
+                    android:textColor="@color/pay_text_gray"
+                    android:textSize="@dimen/sp_11"
+                    app:layout_constraintBottom_toBottomOf="@+id/promo_amount"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/promo_amount"
+                    app:layout_constraintTop_toTopOf="@id/promo_amount" />
+
+                <TextView
+                    android:id="@+id/discount_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp_23"
+                    android:paddingTop="@dimen/dp_12"
+                    android:text="Discount"
+                    android:textColor="@color/pay_text_gray"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/promo_amount" />
+
+                <TextView
+                    android:id="@+id/discount_amount_money"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:paddingHorizontal="@dimen/dp_23"
+                    android:textColor="@color/pay_text_gray"
+                    android:textSize="@dimen/sp_11"
+                    app:layout_constraintBottom_toBottomOf="@+id/discount_amount"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/discount_amount"
+                    app:layout_constraintTop_toTopOf="@id/discount_amount" />
+
+                <TextView
+                    android:id="@+id/donate_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp_23"
+                    android:paddingTop="@dimen/dp_12"
+                    android:text="Donation"
+                    android:textColor="@color/pay_text_gray"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/discount_amount" />
+
+                <TextView
+                    android:id="@+id/donate_amount_money"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:paddingHorizontal="@dimen/dp_23"
+                    android:textColor="@color/pay_text_gray"
+                    android:textSize="@dimen/sp_11"
+                    app:layout_constraintBottom_toBottomOf="@+id/donate_amount"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/donate_amount"
+                    app:layout_constraintTop_toTopOf="@id/donate_amount" />
+
+                <TextView
+                    android:id="@+id/tip_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp_23"
+                    android:paddingTop="@dimen/dp_12"
+                    android:text="Tip"
+                    android:textColor="@color/pay_text_gray"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/donate_amount" />
+
+                <TextView
+                    android:id="@+id/tip_amount_money"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:paddingHorizontal="@dimen/dp_23"
+                    android:textColor="@color/pay_text_gray"
+                    android:textSize="@dimen/sp_11"
+                    app:layout_constraintBottom_toBottomOf="@+id/tip_amount"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tip_amount"
+                    app:layout_constraintTop_toTopOf="@id/tip_amount" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_55"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_23"
+                android:text="Total mount Due"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instal_discount" />
+
+            <TextView
+                android:id="@+id/order_amount"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_55"
+                android:ellipsize="end"
+                android:gravity="right|center_vertical"
+                android:paddingHorizontal="@dimen/dp_23"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/total"
+                app:layout_constraintTop_toTopOf="@id/total" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/total" />
+
+            <TextView
+                android:id="@+id/payment"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_55"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_23"
+                android:text="Payment method"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/total" />
+
+            <TextView
+                android:id="@+id/card_type"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_55"
+                android:ellipsize="end"
+                android:gravity="right|center_vertical"
+                android:paddingHorizontal="@dimen/dp_23"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/payment"
+                app:layout_constraintTop_toTopOf="@id/payment" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payment" />
+
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_55"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_23"
+                android:text="Status"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payment" />
+
+            <TextView
+                android:id="@+id/staus_text"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_55"
+                android:ellipsize="end"
+                android:gravity="right|center_vertical"
+                android:paddingHorizontal="@dimen/dp_23"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/status"
+                app:layout_constraintTop_toTopOf="@id/status" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/status" />
+
+            <TextView
+                android:id="@+id/when"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_55"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_23"
+                android:text="When"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/status" />
+
+            <TextView
+                android:id="@+id/transition_time"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_55"
+                android:ellipsize="end"
+                android:gravity="right|center_vertical"
+                android:paddingHorizontal="@dimen/dp_23"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/when"
+                app:layout_constraintTop_toTopOf="@id/when" />
+
+            <TextView
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/when" />
+
+            <TextView
+                android:id="@+id/due_dates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_23"
+                android:paddingTop="@dimen/dp_23"
+                android:text="Payment due dates"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/when"
+                app:layout_constraintTop_toBottomOf="@+id/when" />
+
+
+            <LinearLayout
+                android:id="@+id/instalment_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/due_dates" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.home.glx.uwallet.selfview.DampingReboundNestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

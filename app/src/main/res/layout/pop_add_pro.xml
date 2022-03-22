@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="30dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="Enter promo code"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_18" />
+
+    <ImageView
+        android:id="@+id/id_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:scaleType="center"
+        android:src="@mipmap/cha" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_57"
+        android:layout_below="@+id/id_back"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="bottom"
+        android:hint="Enter promo code"
+        app:hintTextAppearance="@style/box">
+
+        <com.home.glx.uwallet.tools.ChangeLineEdittext
+            android:id="@+id/id_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_57"
+            android:background="@drawable/edt_bg_un_selected"
+            android:gravity="bottom"
+            android:imeOptions="actionSearch"
+            android:lines="1"
+            android:maxLength="20"
+            android:paddingLeft="0dp"
+            android:textColor="@android:color/black"
+
+            android:textColorHint="#717171"
+            android:textCursorDrawable="@drawable/guangbiaocolor"
+            android:textSize="17sp">
+
+            <requestFocus />
+        </com.home.glx.uwallet.tools.ChangeLineEdittext>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/jine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/til_first_name"
+        android:layout_marginLeft="21dp"
+        android:text="10.00"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/til_first_name"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
+        android:singleLine="true"
+        android:textColor="@color/text_orange"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/jine"
+        android:layout_alignTop="@+id/jine"
+        android:layout_alignBottom="@+id/date"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="21dp"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingBottom="4dp"
+        android:text="Add"
+        android:textColor="@color/text_orange"
+        android:textSize="17sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/date2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jine"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="21dp"
+        android:textColor="@color/color_717171"
+        android:visibility="gone"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jine"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="21dp"
+        android:textColor="@color/color_717171"
+        android:textSize="11sp"
+        android:visibility="gone" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        style="@style/AVLoadingIndicatorView.Small"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/text_orange"
+        app:indicatorName="BallSpinFadeLoaderIndicator" />
+</RelativeLayout>

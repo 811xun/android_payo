@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_h"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:backgroundTint="@color/colorBackGround">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="24dp"
+            android:paddingEnd="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/id_map_model"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@mipmap/location_city_icon" />
+            <TextView
+                android:id="@+id/street"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold"
+                android:text=""
+                android:textColor="@color/white"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/id_select_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="24dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/search_merchant_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/top_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/top_deals"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Discount"
+                android:textColor="@color/text_black"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:background="@drawable/orange_line"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/new_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/new_venues"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Distance"
+                android:textColor="@color/share_text_gray"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fl">
+    </FrameLayout>
+</LinearLayout>

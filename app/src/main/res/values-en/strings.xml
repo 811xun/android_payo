@@ -1,0 +1,565 @@
+<resources>
+    <string name="app_name">Payo</string>
+
+    <!--    没有该权限，此应用程序可能无法正常工作。打开应用设置屏幕以修改应用权限-->
+    <string name="not_permissions_prompt">No authorization，This application may not work properly。Open the application Settings screen to modify the application permissions</string>
+    <!--    必需权限-->
+    <string name="must_permissions">Permission Required</string>
+    <!--    此app需要以下权限-->
+    <string name="permissions_prompt">This app requires the following permissions</string>
+    <string name="permissions_prompt_camera">Camera access has been prohibited. Please grant permission to access camera.</string>
+    <!--    欢迎来到UWallet-->
+    <!--    首页-->
+    <string name="home">Home</string>
+    <!--    理财-->
+    <string name="licai">Investment</string>
+    <!--    发现-->
+    <string name="find">Discover</string>
+    <!--    我的-->
+    <string name="user">My Profile</string>
+    <!--    扫码付款-->
+    <!--    收款码-->
+    <!--    钱包-->
+    <!--    分期-->
+    <!--    账单分期-->
+
+    <!--    预期收益率-->
+    <!--    投资期限-->
+    <!--    可投金额-->
+    <!--    立即投资-->
+    <!--    起投金额-->
+    <!--    天-->
+    <!--    期-->
+    <!--    上月实际收益率-->
+
+    <!--    个人资料-->
+    <string name="user_msg_btn">My Profile</string>
+    <!--    我的钱包-->
+    <!--    我的投资-->
+    <!--    我的分期付-->
+    <!--    我的银行账户-->
+    <!--    关于我们-->
+    <!--    隐私协议-->
+    <!--    隐私协议-->
+    <!--    我已阅读并同意-->
+    <string name="read_agreement">I have read and agree</string>
+    <!--    我已阅读并同意《隐私协议》-->
+    <string name="read_agreement_new">I read and agree the terms of the</string>
+
+    <!--    总资产-->
+    <!--   我的投资-->
+    <!--    本月收益:-->
+    <!--    理财余额：-->
+    <!--    继续投资-->
+    <!--    全部-->
+    <!--    私募-->
+    <!--    <string name="private_placement">Private Funds</string>-->
+    <!--    公募-->
+    <!--    <string name="public_offering">Public Funds</string>-->
+
+    <!--    未派息-->
+    <!--    已派息-->
+    <!--    派息时间：-->
+
+    <!--    扫码支付-->
+    <!--    付款方式-->
+    <!--    付款方式：-->
+    <!--    分期支付-->
+    <!--    还款账户-->
+    <!--   手续费-->
+    <!--   手续费：-->
+    <!--    支付-->
+    <!--    钱包余额-->
+    <!--    支付宝-->
+    <!--    微信-->
+    <!--   实际支付-->
+    <!--    立即付款-->
+    <!--    已逾期-->
+    <!--    已还清-->
+
+    <!--    注册-->
+    <string name="regist">Sign up</string>
+    <!--    立即注册-->
+    <!--   找回密码-->
+    <!--    发送-->
+    <!--    登录-->
+    <!--    忘记密码-->
+    <string name="forget_password">Forgot PIN</string>
+    <!--    密码-->
+    <!--    验证码-->
+    <!--    再次确认密码-->
+
+    <!--    下一步-->
+    <string name="next">Next</string>
+    <!--    剩余份额不足以转让-->
+
+    <!--    请输入注册邮箱-->
+    <!--    请输入验证码-->
+    <string name="re_null_email_code">Please enter the verification code</string>
+    <!--    请输入密码-->
+    <!--    请输入再次确认密码-->
+    <!--    两次密码不一致请重新输入-->
+    <!--    请先阅读并同意隐私协议-->
+
+    <!--    支付成功-->
+
+    <!--    收款方-->
+    <!--    订单价格-->
+    <!--    付款方式-->
+    <!--    订单号-->
+    <!--    订单号：-->
+    <!--    付款账户-->
+    <!--    手续费-->
+    <!--    实付金额-->
+    <!--    创建时间-->
+
+    <!--    起售-->
+    <!--    截止-->
+    <!--    起息日-->
+    <!--    到期-->
+    <!--    充值-->
+    <!--   立即充值-->
+    <!--    充值金额：-->
+
+    <!--    选择会员等级-->
+    <!--    普通会员-->
+    <!--    VIP会员-->
+    <!--    我已阅读并同意-->
+    <!--    《分期付协议》-->
+    <!--    请先同意《分期付协议》-->
+
+    <!--    <string name="member_text">每月$%s服务费，账单最高可分%s期</string>-->
+    <!--    <string name="upgrade_to">升级为%s会员</string>-->
+    <!--    <string name="change_grade_to">修改为%s会员</string>-->
+
+    <!--    扫一扫向我付款-->
+    <!--    收款记录-->
+    <!--    收款-->
+
+    <!--    + 添加银行-->
+    <!--    添加银行-->
+    <!--    添加银行账户-->
+    <string name="add_bank_account">Add bank account</string>
+    <!--    分期付-->
+    <!--    使用分期付享受更多优惠-->
+
+    <!--    你的分期付额度是-->
+    <!--    同意开通看额度-->
+    <!--    交易有提醒-->
+    <!--    支持自动还款-->
+    <!--    当前剩余可用额度-->
+    <!--    激活-->
+    <!--    总额度：-->
+    <!--    分期账单：-->
+    <!--    立即开通分期付-->
+    <!--我已阅读并同意《分期付协议》-->
+
+    <!--    当前等级：-->
+    <!--    等级调整-->
+    <!--    可升级为VIP用户，享受更长期的分期-->
+    <!--    分期付账单-->
+    <!--    关闭分期付-->
+
+    <!--    共-->
+    <!--    笔-->
+
+    <!--    消息-->
+    <!--    关闭-->
+    <!--    接受-->
+    <!--    暂无...-->
+    <string name="null_text">No data available</string>
+    <!--    暂无数据-->
+    <!--    数据错误-->
+
+    <!--    查看详情-->
+    <string name="look_detail">view details</string>
+    <!--    到账金额-->
+    <!--    请输入交易密码-->
+
+    <!--    您使用余额进行投资的申请已提交\n等待审核-->
+    <!--    您不是有经验的投资者\n无法完成本次投资-->
+    <!--    请联系我们提供相关材料\n联系电话：-->
+    <!--    份额转让成功\n请耐心等待审核结果-->
+
+    <!--    剩余未还金额：-->
+    <!--    剩余未还金额-->
+    <!--    未结清-->
+    <!--    已结清-->
+
+    <!--    请输入银行卡号（银行卡号输入错误）-->
+    <!--    请输入手机号-->
+    <string name="bank_email_input_error">Email entered incorrectly</string>
+    <!--    请输入详细地址-->
+    <!--    请输入城市-->
+    <!--    请选择国家-->
+    <!--    请输入4位邮编-->
+    <!--    请选择到期年月-->
+    <!--    请选择卡类型-->
+    <!--    请输入安全码-->
+    <!--    请输入银行名-->
+    <string name="bank_name_input_error">Please enter bank name</string>
+    <!--    请输入BSB-->
+    <string name="bank_bsb_input_error">Please enter BSB</string>
+    <!--    请选择州-->
+
+    <!--    当前持有-->
+    <!--    已结束-->
+    <!--    到期日：-->
+    <!--    预期收益率：-->
+    <!--    投资金额：-->
+    <!--    投资金额-->
+
+    <!--    个人-->
+    <!--    公司-->
+    <!--    信托-->
+
+    <!--    当前余额-->
+    <!--   交易明细-->
+
+    <!--    审核中-->
+    <!--    失败-->
+    <!--    成功-->
+    <!--    投资部分确认-->
+    <!--    项目关闭-->
+    <!--    提现-->
+    <!--    部分结算-->
+
+    <!--    募集中-->
+    <!--    计息中-->
+    <!--    待回款-->
+
+    <!--   本期应还-->
+    <!--    去还款-->
+    <!--    应还款日-->
+    <!--    应还本金-->
+    <!--    违约金-->
+    <!--    期次-->
+    <!--    确定-->
+    <!--    请选择还款期次-->
+
+    <!--    热门商户-->
+
+    <!--    旧密码-->
+    <!--    新密码-->
+    <!--    确认新密码-->
+
+    <!--   卡支付-->
+    <!--    支付金额-->
+
+    <!--    <string name="fq_repay_choice">共%s期 合计 </string>-->
+    <!--    银行账户-->
+    <!--    银行卡号-->
+    <!--    账户号-->
+
+    <!--    银行名-->
+    <string name="bank_name">Bank Name</string>
+    <!--    银行账号-->
+    <string name="bank_card_account">Account Number</string>
+    <!--    银行账号：-->
+    <!--   银行名称：-->
+    <string name="bsb">BSB</string>
+    <!--    账户名-->
+
+    <!--    卡类型-->
+    <!--    到期年月-->
+    <!--    安全码-->
+    <!--    电话-->
+    <!--    详细地址-->
+    <string name="bank_address">Address</string>
+    <!--    城市-->
+    <string name="city">City</string>
+    <!--    国家-->
+    <!--  居住国-->
+    <!--    邮编-->
+    <string name="postcode">Postcode</string>
+    <!--    添加-->
+    <!--    保存-->
+    <string name="save_success">Save successfully</string>
+    <!--    余额-->
+    <!--   持有中-->
+
+    <!--    驾照-->
+    <!--    驾照所属州-->
+
+    <!--    等待人工审核-->
+    <!--    您的分期付服务已被禁用-->
+
+    <!--   护照-->
+    <!--    有效期-->
+    <!--    签发国-->
+    <!--    性别-->
+    <!--    男-->
+    <!--    女-->
+    <!--   医保卡-->
+    <!--    卡类型-->
+    <!--    个人参考编号-->
+    <!--    到期日-->
+    <!--    重置-->
+
+
+    <!--    立即投资-->
+    <!--    派息计划-->
+    <!--    投资记录-->
+    <!--    还本记录-->
+    <!--    产品详情-->
+
+    <!--    待完成订单-->
+    <!--   申请时间：-->
+    <!--    收益明细-->
+
+    <!--    已拒绝-->
+    <!--    待审批-->
+    <!--    转让中-->
+    <!--    转让成功-->
+    <!--    通过-->
+    <!--    信息不完善-->
+    <!--    审批拒绝-->
+
+    <!--    投资时间：-->
+    <!--    申请金额：-->
+    <!--    审批金额：-->
+
+    <!--  返还时间：-->
+    <!--    返还类型：-->
+    <!--    返还本金：-->
+    <!--    派发时间：-->
+
+    <!--    请选择投资类型-->
+    <!--    请选择购买身份类型-->
+    <!--    余额不足-->
+    <!--    余额投资-->
+    <!--    派息/还本账号-->
+    <!--    请选择-->
+    <string name="please_choice">Please select</string>
+    <!--   银行流水截图-->
+    <!--    <string name="choice_paixibank">请添加派息/还本账号</string>-->
+
+    <!--    上传打款凭证-->
+    <!--    提交成功，待审核-->
+
+    <string name="input_bank_account">Please enter account number</string>
+    <string name="input_bank_account_name">Please enter account name</string>
+
+    <!--    请您先同意协议-->
+    <string name="please_agree_agreement">Please agree to the terms and conditions to continue</string>
+
+    <!--    您的投资申请提交成功\n我们的客服人员将会在48小时内与您联系-->
+    <!--    请将投资款项汇入以下账户，并在备注中填写订单号。\n打款成功后，上传打款凭证。-->
+    <!--    我已阅读并同意Information Memorandum &#038;Sub Information Memorandum-->
+
+    <!--    转让记录-->
+    <!--    份额转让-->
+    <string name="transfer_portion">Share Transfer</string>
+    <!--    转让金额-->
+    <!--    确认转让-->
+    <!--    提交-->
+    <!--   收益-->
+    <!--    实际收益：-->
+    <!--    预期收益-->
+
+    <!--税款：-->
+
+    <!--    <string name="add_bank_top">绑定%s的银行卡</string>-->
+
+    <!--    持卡人姓名-->
+
+    <!--    设置-->
+    <string name="setting">Settings</string>
+    <string name="z_email">Email</string>
+    <!--    设置交易密码-->
+    <string name="set_repay_pas">Set Transaction Password</string>
+    <!--    修改登录密码-->
+    <!--    请输入6位交易密码-->
+    <!--    再次确认密码-->
+    <!--    两次密码输入不相同-->
+    <!--    退出-->
+
+    <!--    退出成功-->
+    <string name="unlogin_success">Exited</string>
+    <!--    充值成功-->
+
+    <!--    取消-->
+    <string name="cancel">Cancel</string>
+    <string name="not_greater">Date of Februray cannot be greater than 29.</string>
+    <string name="not_greater2">Date of Februray cannot be greater than 28.</string>
+    <string name="time_error">Please check selected date.</string>
+
+
+    <!--    身份验证-->
+    <!--    澳大利亚-->
+    <string name="australia">Australia</string>
+    <!--    中国-->
+    <!--    其他-->
+    <!--    上传身份证正面-->
+    <!--    上传身份证反面-->
+
+    <!--    身份证正面-->
+    <!--    身份证反面-->
+
+    <!--    上传驾照正面-->
+    <!--    上传护照照片页-->
+    <!--    上传医保卡正面-->
+
+    <!--    名-->
+    <!--    中间名-->
+    <!--    姓-->
+    <!--    生日-->
+    <!--    家庭住址-->
+
+    <!--    请填写信息进行身份验证-->
+    <string name="emile_code_put">The verification code has been sent to your phone number</string>
+
+    <!--选择所在地点-->
+    <string name="pick_place">Please select your location</string>
+    <!--无法定位，请打开定位服务-->
+    <string name="gps_not_use">Your location could not been determined, please turn on location service.</string>
+
+    <!--    在此我确认授权将我的个人信息和资料用于且仅用于官方或证件发行机构验证身份使用。-->
+    <string name="unsetting">Not set</string>
+    <!--    选择还款账户-->
+    <!--    请选择付款账户-->
+    <string name="select_repay_account">Please select Payment Account</string>
+    <!--    选择账户-->
+    <!--    请输入付款金额-->
+    <!--    请选择支付方式-->
+
+    <!--    请输入名-->
+    <!--    请输入姓-->
+    <!--    输入证件号-->
+    <!--    驾照所属州-->
+    <!--    请选择驾照所属州-->
+    <!--    请选择护照签发国-->
+    <!--    请选择性别-->
+    <!--    请选择医保卡类型-->
+    <!--    请输入个人参考编号-->
+    <!--    证件-->
+    <!--    请输入护照号码-->
+    <!--    请选择证件类型-->
+    <!--    姓名-->
+    <!--    请输入姓名-->
+    <!--    请选择生日-->
+    <!--    身份证号-->
+    <!--    请输入身份证号-->
+
+    <!--    预热期-->
+    <!--    募集中-->
+    <!--    冻结期-->
+    <!--    计息中-->
+    <!--    已关闭-->
+    <!--    募集转让中-->
+    <!--    待回款-->
+    <!--    已结算-->
+    <!--本月-->
+
+    <!--    输入新手机号-->
+    <!--    修改手机号-->
+    <!--    手机号-->
+    <string name="phone_number">Phone Number</string>
+    <!--    请输入手机号-->
+    <string name="please_input_phone_number">Please Enter New Phone Number</string>
+
+    <!--    设置PIN码-->
+    <!--    输入6位PIN码-->
+    <string name="set_4pin">Set up a PIN</string>
+    <!--    校验PIN密码-->
+    <string name="input_pin_code">Enter Your PIN</string>
+    <!--    修改PIN密码-->
+    <string name="change_pin_code">Change PIN</string>
+    <!--    原PIN密码-->
+    <!--    再次确认PIN密码-->
+    <!--    还有一次输入机会否则将强制登出账号-->
+    <string name="last_chance">One time left, log out if fail.</string>
+    <!--    您还未添加银行卡-->
+
+    <!--    折扣排序-->
+    <!--    折扣升序-->
+    <!--    折扣降序-->
+    <!--距离排序-->
+    <!--    距离由近及远-->
+    <!--   距离由远及近 -->
+
+    <!--    筛选-->
+
+    <!--商户类型-->
+    <!--    请输入原密码-->
+    <!--    密码不可为空-->
+
+    <!--    语言切换-->
+    <string name="language_switch">Language</string>
+
+    <!--    未认证-->
+    <!--    已认证-->
+    <!--    认证中-->
+    <!--    认证失败-->
+
+
+    <!--    新首页文字-->
+    <!--    欢迎回来-->
+    <!--    热门优惠-->
+    <!--    热门商家-->
+    <!--    热门投资-->
+
+    <!--    检测到NFC标签-->
+    <!--    KYC拒绝时显示的TITLE-->
+    <!--    KYC拒绝时显示的内容-->
+    <!--    请等待-->
+    <!--    最多可分4期-->
+    <!--    原价-->
+    <!--    折扣-->
+    <string name="zhou">State</string>
+
+    <!--    您的-->
+
+    <string name="PIN_Successfully">Your PIN has been set.</string>
+
+    <!--    开通分期付顶部文字-->
+
+    <string name="add_bank_card">Add Card</string>
+
+    <!--    街道号-->
+    <!--    街道名称-->
+    <!--    区-->
+    <!--    请输入邮编-->
+
+    <!--    绑卡成功提示-->
+    <!--    绑定账户成功-->
+
+    <!--    折扣-->
+
+    <string name="select_bank_name">Select Bank Name</string>
+    <!--    其他银行-->
+
+    <!--    -->
+
+    <!--    绑定账户勾选提示信息-->
+    <!--    绑定银行卡勾选提示信息-->
+
+    <!--    还款成功-->
+    <!--    银行处理中-->
+
+    <!--    请先阅读并同意隐私协议-->
+
+    <string name="Please_confirm">Please confirm…</string>
+    <string name="want_logout">Are you sure you want to log out?</string>
+
+    <string name="original_pin">Your current PIN</string>
+    <string name="transaction_failed">Payment failed</string>
+
+    <!--"您想要删除此账户吗？"="Do you wish to delete this account?";-->
+    <!-- 您想要删除此卡吗?-->
+    <!--    "换绑理财"="Investment";
+    "换绑分期付"="Payo";-->
+    <!--"账户删除成功”=“The bank account has been deleted”;-->
+    <!--"此卡已绑定理财，需要先更换绑定才能对此卡进行删除"="";-->
+    <!--"此卡已绑定理财和分期付，\n需要先更换绑定才能对此卡进行删除"="”;-->
+    <!--"此卡已绑定分期付，需要先更换绑定才能对此卡进行删除"="";-->
+    <!--    "替换成功”=“Replacement success”;-->
+    <!--    “处理中”=“Processing”;-->
+    <!--    "账户删除失败”=“Delete request failed";-->
+    <!--    “删除失败（因为三方拒绝了您的申请）”;-->
+
+    <string name="delete">Delete</string>
+
+    <!--    恭喜-->
+
+</resources>

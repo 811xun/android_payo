@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "230734597809",
+    "firebase_url": "https://u-wallet-21198.firebaseio.com",
+    "project_id": "u-wallet-21198",
+    "storage_bucket": "u-wallet-21198.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230734597809:android:1a5f60d587a89832e1dc90",
+        "android_client_info": {
+          "package_name": "com.home.glx.uwallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "230734597809-id1gf9e8oga3v2qju3eqk4iflfv07e8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC80QKGvifQBeg6uTmYpNayVAQXrkDTqxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "230734597809-id1gf9e8oga3v2qju3eqk4iflfv07e8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

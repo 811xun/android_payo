@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_24"
+    android:paddingRight="@dimen/dp_24">
+
+    <TextView
+        android:id="@+id/id_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="23dp"
+        android:gravity="center_horizontal"
+        android:text="T&#038;C's Update"
+        android:textColor="@color/text_black"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="Our Pay Now and Pay Later Terms &#038;\nConditions have been updated."
+        android:textColor="@color/text_black"
+        android:lineSpacingExtra="@dimen/dp_2"
+        android:textSize="16.5sp" />
+
+
+    <TextView
+        android:id="@+id/proText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:drawableRight="@mipmap/right_arrow"
+        android:drawablePadding="17dp"
+        android:text="Learn more about Pay Now"
+        android:textColor="@color/text_orange"
+        android:textSize="16.5sp" />
+
+
+    <TextView
+        android:id="@+id/proText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:drawableRight="@mipmap/right_arrow"
+        android:drawablePadding="11dp"
+        android:text="Learn more about Pay Later"
+        android:textColor="@color/text_orange"
+        android:textSize="16.5sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="25dp">
+
+        <Button
+            android:id="@+id/btn_get_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_53"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_27orange"
+            android:gravity="center"
+            android:text="Agree to the updated T&#038;Cs"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/id_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_53"
+            android:layout_below="@+id/btn_get_code"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="Decline"
+            android:textAllCaps="false"
+            android:textColor="@color/end_orange"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

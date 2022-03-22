@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <FrameLayout
+        android:id="@+id/id_tab_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="62dp">
+
+    </FrameLayout>
+    <com.mxy.fpshadowlayout.FpShadowLayout
+        android:layout_above="@+id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        app:fp_round_corner="fp_corner_all"
+        app:fp_shadowColor="#26000000"
+        app:fp_shadowRadius="4dp"
+        app:fp_shadowShape="fp_round_rectangle"
+        app:fp_shadowSide="fp_top">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    </com.mxy.fpshadowlayout.FpShadowLayout>
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="#FAFAFA"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/id_home_lay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/id_home_img"
+                android:layout_width="@dimen/dp_23"
+                android:layout_height="@dimen/dp_25"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home_icon_on" />
+
+            <TextView
+                android:id="@+id/id_home_text"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="11sp"
+                android:textColor="@color/end_orange"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_licai_lay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/id_licai_img"
+                android:layout_width="@dimen/dp_19"
+                android:layout_height="@dimen/dp_19"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/find_icopn_of1" />
+
+            <TextView
+                android:id="@+id/id_licai_text"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textSize="11sp"
+                android:textColor="#CACED5"/>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/id_scan_img"
+            android:layout_width="83dp"
+            android:layout_height="83dp"
+            android:layout_marginBottom="11dp"
+            android:src="@mipmap/scan_icon" />
+
+
+        <LinearLayout
+            android:id="@+id/id_find_lay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/id_find_img"
+                android:layout_width="@dimen/dp_26"
+                android:layout_height="@dimen/dp_22"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/licai_icon_of" />
+
+            <TextView
+                android:id="@+id/id_find_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Wallet"
+                android:textColor="#CACED5"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_usre_lay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/id_user_img"
+                android:layout_width="@dimen/dp_21"
+                android:layout_height="@dimen/dp_23"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/user_bottom_icon" />
+            <TextView
+                android:id="@+id/id_user_text"
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:singleLine="true"
+                android:textSize="11sp"
+                android:textColor="#CACED5"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

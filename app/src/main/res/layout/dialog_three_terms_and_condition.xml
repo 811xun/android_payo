@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_24"
+    android:paddingTop="@dimen/dp_24"
+    android:paddingRight="@dimen/dp_24">
+
+    <TextView
+        android:id="@+id/id_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_15"
+        android:gravity="center_horizontal"
+        android:text="Terms and conditions"
+        android:textColor="@color/text_black"
+        android:textSize="26sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/id_protocols1"
+            android:layout_width="@dimen/dp_22"
+            android:layout_height="@dimen/dp_22"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/check3"
+            android:button="@null"
+            android:checked="false"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:id="@+id/proText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="22dp"
+            android:layout_toRightOf="@+id/id_protocols1"
+            android:lineSpacingExtra="@dimen/dp_2"
+            android:textColor="@color/color_717171"
+            android:textSize="12.5sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/id_protocols2"
+            android:layout_width="@dimen/dp_22"
+            android:layout_height="@dimen/dp_22"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/check3"
+            android:button="@null"
+            android:checked="false"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:id="@+id/proText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/id_protocols2"
+            android:lineSpacingExtra="@dimen/dp_2"
+            android:textColor="@color/color_717171"
+            android:textSize="12.5sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/id_protocols3"
+            android:layout_width="@dimen/dp_22"
+            android:layout_height="@dimen/dp_22"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/check3"
+            android:button="@null"
+            android:checked="false"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:id="@+id/proText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/id_protocols3"
+            android:lineSpacingExtra="@dimen/dp_2"
+            android:textColor="@color/color_717171"
+            android:textSize="12.5sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/btn_get_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_53"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/btn_hui_jianbian"
+            android:gravity="center"
+            android:text="Agree and continue"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/id_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_53"
+            android:layout_below="@+id/btn_get_code"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="Decline"
+            android:textAllCaps="false"
+            android:textColor="@color/end_orange"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

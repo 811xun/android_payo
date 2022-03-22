@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_main_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/dp_23"
+    android:paddingRight="@dimen/dp_23">
+
+    <ImageView
+        android:id="@+id/tv_payo"
+        android:layout_width="@dimen/dp_139"
+        android:layout_height="@dimen/dp_49"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="174dp"
+        android:src="@mipmap/payo" />
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_payo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_15"
+        android:gravity="center"
+        android:text="Eat now, pay later."
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_17" />
+
+    <RelativeLayout
+        android:id="@+id/rl_edt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:layout_below="@+id/hint"
+        android:layout_marginTop="54dp">
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_sex_one"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/til_account"
+
+            android:layout_alignBottom="@+id/til_account"
+            android:hint="Phone number"
+            app:hintTextAppearance="@style/box">
+
+            <com.home.glx.uwallet.tools.ChangeLineEdittext
+                android:id="@+id/iv_sex_one"
+                android:layout_width="190dp"
+                android:layout_height="@dimen/dp_52"
+                android:layout_alignStart="@+id/til_sex_one"
+                android:layout_alignBottom="@+id/til_sex_one"
+                android:background="@drawable/edt_bg_un_selected"
+                android:text="+61"
+                android:textColor="@android:color/black"
+                android:textColorHint="#717171"
+
+                android:textSize="17sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_sex_one_shenyanse"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/til_account"
+
+            android:layout_alignBottom="@+id/til_account"
+            android:hint="Phone number"
+            app:hintTextAppearance="@style/box">
+
+            <com.home.glx.uwallet.tools.ChangeLineEdittext
+                android:id="@+id/iv_sex_one_shenyanse"
+                android:layout_width="190dp"
+                android:layout_height="@dimen/dp_52"
+                android:layout_alignStart="@+id/til_sex_one"
+                android:layout_alignBottom="@+id/til_sex_one"
+                android:background="@drawable/edt_bg_selected"
+                android:text="+61"
+                android:textColor="@android:color/black"
+                android:textColorHint="#717171"
+
+                android:textSize="17sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone number"
+            android:paddingLeft="35dp"
+            app:hintTextAppearance="@style/box">
+
+            <com.home.glx.uwallet.tools.ChangeLineEdittext
+                android:id="@+id/et_account"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_52"
+                android:layout_alignStart="@+id/til_account"
+                android:layout_alignBottom="@+id/til_account"
+                android:background="@drawable/edt_bg_un_selected"
+                android:inputType="number"
+                android:maxLength="18"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textColorHint="#717171"
+                android:textSize="17sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_53"
+        android:layout_below="@+id/rl_edt"
+        android:layout_marginTop="26dp">
+
+        <Button
+            android:id="@+id/btn_get_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_53"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/btn_hui_jianbian"
+            android:gravity="center"
+            android:text="Send verification code"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_53"
+        android:layout_alignTop="@+id/rl"
+        android:layout_alignBottom="@+id/rl"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/waiting_icon_hui" />
+    </RelativeLayout>
+
+</RelativeLayout>

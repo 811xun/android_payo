@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_wai"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/tv_payo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/id_back"
+        android:layout_alignBottom="@+id/id_back"
+        android:gravity="center"
+        android:text="Add new card"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/id_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="6dp"
+        android:padding="18dp"
+        android:src="@mipmap/back_icon" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/id_back"
+        android:background="@color/color_ebebeb" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="@dimen/dp_23"
+        android:paddingRight="@dimen/dp_23"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp_70">
+
+            <ImageView
+                android:id="@+id/cardLogo"
+                android:layout_width="41dp"
+                android:layout_height="24dp"
+                android:layout_alignTop="@+id/til_id_cardno"
+                android:layout_alignBottom="@+id/til_id_cardno"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingTop="7dp"
+                android:src="@mipmap/pay_visa_logo_new"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="41dp"
+                android:layout_height="24dp"
+                android:layout_alignTop="@+id/til_id_cardno"
+                android:layout_alignBottom="@+id/til_id_cardno"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:paddingRight="4dp"
+                android:paddingBottom="3dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/til_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/til_id_cardno"
+                android:layout_marginTop="18dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_date_left"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Expiry date (mm/yy)"
+                    app:hintTextAppearance="@style/box">
+
+                    <EditText
+                        android:id="@+id/et_date_left"
+                        android:layout_width="180dp"
+                        android:layout_height="@dimen/dp_52"
+                        android:background="@drawable/edt_bg_un_selected"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:paddingLeft="0dp"
+
+                        android:paddingTop="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_16"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="#717171"
+                        android:textSize="17sp" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_account2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:visibility="gone"
+
+                    app:hintTextAppearance="@style/box">
+
+                    <com.home.glx.uwallet.tools.ChangeLineEdittext
+                        android:id="@+id/et_date_center"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_52"
+                        android:background="@drawable/edt_bg_selected"
+                        android:enabled="false"
+                        android:paddingTop="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_16"
+                        android:text="/"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="#717171"
+                        android:textSize="17sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_account3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    app:hintTextAppearance="@style/box">
+
+                    <EditText
+                        android:id="@+id/et_date_right"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_52"
+                        android:background="@drawable/edt_bg_un_selected"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:paddingTop="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_16"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="#717171"
+                        android:textSize="17sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_id_protocols1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/til_id_cvv"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/proText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_toRightOf="@+id/id_protocols"
+                    android:lineSpacingExtra="@dimen/dp_3"
+                    android:text="Your above information is protected by PCI DSS scheme (Payment Card Industry Data Security Standard) provided by Lateral Payment Solutions Pty Ltd ACN 610 150 064."
+                    android:textColor="@color/color_717171"
+                    android:textSize="@dimen/sp_12" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_53"
+                android:layout_below="@+id/rl_id_protocols1"
+                android:layout_marginTop="45dp">
+
+                <Button
+                    android:id="@+id/btn_get_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_53"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/btn_hui_jianbian"
+                    android:gravity="center"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_icon"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_53"
+                android:layout_below="@+id/rl_id_protocols1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="45dp"
+                android:background="@mipmap/btn_orange_jianbian"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:src="@mipmap/waiting_icon_hui" />
+            </RelativeLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_id_cvv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/til_city"
+                android:layout_marginTop="18dp"
+                android:hint="CVV"
+                app:hintTextAppearance="@style/box">
+
+                <com.home.glx.uwallet.tools.ChangeLineEdittext
+                    android:id="@+id/et_id_cvv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_52"
+                    android:background="@drawable/edt_bg_un_selected"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:maxLines="1"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#717171"
+                    android:textSize="17sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_id_cardno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_hint"
+                android:layout_marginTop="@dimen/dp_15"
+                android:hint="Australian bank card number"
+                app:hintTextAppearance="@style/box">
+
+                <com.home.glx.uwallet.tools.ChangeLineEdittext
+                    android:id="@+id/card_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_52"
+                    android:background="@drawable/edt_bg_un_selected"
+                    android:inputType="number"
+                    android:maxLength="24"
+                    android:maxLines="1"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text=""
+
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#717171"
+                    android:textSize="17sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_alignTop="@+id/tv_payo"
+        android:layout_alignBottom="@+id/scroll_view"
+        android:layout_height="match_parent"
+        android:background="#44000000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="43dp"
+            android:layout_marginTop="85dp"
+            android:layout_marginRight="43dp"
+            android:background="@drawable/view_yj_dialog_white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_20"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="@dimen/dp_15"
+                android:text=""
+                android:textColor="@color/text_black"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/id_tex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1"
+                android:paddingHorizontal="@dimen/dp_15"
+                android:text=""
+                android:textColor="@color/text_black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#26000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/id_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="No"
+                    android:textColor="@color/color_717171"
+                    android:textSize="@dimen/sp_17"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/line_vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_c9c9c9"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/id_queding"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Confirm"
+
+                    android:textColor="@color/colorBackGround"
+                    android:textSize="@dimen/sp_17" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

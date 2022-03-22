@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="Bank details"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_18" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:paddingLeft="@dimen/dp_23"
+        android:paddingRight="@dimen/dp_23"
+        android:src="@mipmap/back_icon" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title"
+        android:background="#ececec" />
+
+
+    <TextView
+        android:id="@+id/search_bank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:layout_marginTop="@dimen/dp_23"
+        android:layout_marginRight="@dimen/dp_23"
+        android:text="Search your bank"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_20" />
+
+    <EditText
+        android:id="@+id/search_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_below="@+id/search_bank"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="@dimen/dp_23"
+        android:background="@drawable/view_yj_m5black"
+        android:hint="Search bank name"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/dp_50"
+        android:paddingRight="@dimen/dp_10"
+        android:textColor="@color/black"
+        android:textColorHint="@color/color_717171"
+        android:textSize="@dimen/sp_15" />
+
+    <ImageView
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_below="@+id/search_bank"
+        android:layout_marginLeft="@dimen/dp_41"
+        android:layout_marginTop="@dimen/dp_28"
+        android:src="@mipmap/search_icon1" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_edit"
+        android:layout_marginTop="16dp"
+
+        app:srlAccentColor="@color/colorBackGround"
+        app:srlEnableLoadMore="true"
+        app:srlEnableNestedScrolling="true"
+        app:srlHeaderInsetStart="-10dp"
+        app:srlPrimaryColor="@color/colorPrimary">
+
+        <com.scwang.smartrefresh.header.MaterialHeader
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ListView
+            android:id="@+id/bank_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:divider="@null"
+            android:listSelector="#FAFAFA"
+            android:scrollbars="none"
+            android:visibility="gone" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <ListView
+        android:id="@+id/search_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_edit"
+        android:layout_marginTop="32dp"
+        android:divider="@null"
+        android:paddingLeft="7dp"
+        android:scrollbars="none" />
+
+</RelativeLayout>

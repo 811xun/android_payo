@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.SetNewPinActivity">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_h"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/id_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@mipmap/back_b" />
+
+        <TextView
+            android:id="@+id/id_title"
+            style="@style/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Set new PIN"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#CBCED4" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/enter_code"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <TextView
+            android:id="@+id/code_digit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_47"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:text="Please enter 6 digit code sent to your phone number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.home.glx.uwallet.selfview.PwdEditText_Fenkai
+            android:id="@+id/id_code_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginRight="30dp"
+            android:digits="0123456789"
+            android:inputType="number"
+            app:backColor="@color/white"
+            app:checkedColor="#d0d0d0"
+            app:isWaitInput="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/code_digit"
+            app:round="0dp"
+            app:space="0dp"
+            app:textColor="#717171"
+            app:textLength="6"
+            app:waitInputColor="#707070">
+
+            <requestFocus />
+        </com.home.glx.uwallet.selfview.PwdEditText_Fenkai>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_33"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_code_edt">
+
+            <TextView
+                android:id="@+id/send_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resend code"
+                android:textColor="#707070"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/times"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/set_pin_cl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <TextView
+            android:id="@+id/set_digit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_45"
+            android:gravity="center"
+            android:text="Please set a 4-digit number as your PIN."
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.home.glx.uwallet.selfview.PwdEditText_Fenkai
+            android:id="@+id/first_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="86dp"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginRight="86dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:backColor="@color/white"
+            app:checkedColor="#d0d0d0"
+            app:isWaitInput="true"
+            app:layout_constraintTop_toBottomOf="@+id/set_digit"
+            app:round="7.5dp"
+            app:space="0dp"
+            app:textColor="#717171"
+            app:textLength="4"
+            app:waitInputColor="#707070" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/re_set_pin_cl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <TextView
+            android:id="@+id/re_enter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_45"
+            android:gravity="center"
+            android:text="Re-enter your new PIN"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.home.glx.uwallet.selfview.PwdEditText_Fenkai
+            android:id="@+id/last_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="86dp"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginRight="86dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:backColor="@color/white"
+            app:checkedColor="#d0d0d0"
+            app:isWaitInput="true"
+            app:layout_constraintTop_toBottomOf="@+id/re_enter"
+            app:round="7.5dp"
+            app:space="0dp"
+            app:textColor="#717171"
+
+            app:textLength="4"
+            app:waitInputColor="#707070" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

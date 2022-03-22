@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/list_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:paddingHorizontal="13dp"
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlAccentColor="@android:color/white"
+            app:srlEnableLoadMore="true"
+            app:srlHeaderInsetStart="-10dp"
+            app:srlPrimaryColor="@color/colorPrimary">
+            <com.scwang.smartrefresh.header.MaterialHeader
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <ListView
+                    android:id="@+id/id_recyclerview"
+                    android:divider="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </ListView>
+            </LinearLayout>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/location_permission"
+        android:background="@color/bj"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36sp"
+                android:text="Oops!"
+                android:textColor="#FF2D2C2A"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FF514E42"
+                android:text="@string/cant_find_location"/>
+            <TextView
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:layout_width="289dp"
+                android:textColor="#FF959BA4"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="@string/please_enable_location"/>
+            <Button
+                android:id="@+id/open_location"
+                android:layout_marginTop="48dp"
+                android:layout_width="111dp"
+                android:layout_height="48dp"
+                android:text="@string/enable_location"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/view_btn_32orange"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+

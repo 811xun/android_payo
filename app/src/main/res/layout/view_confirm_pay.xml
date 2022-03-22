@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_16"
+    android:background="@drawable/confirm_pay_bottom_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:src="@mipmap/close_icon"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay all"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/sp_20"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/close"/>
+    <TextView
+        android:id="@+id/merchant_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/close"
+        android:textSize="@dimen/sp_12"
+        android:textColor="#CACED5"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CACED5"
+        app:layout_constraintTop_toBottomOf="@+id/merchant_name"
+        android:layout_marginTop="@dimen/dp_12"/>
+
+    <TextView
+        android:id="@+id/instalment"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Instalment amount"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp_16"/>
+
+    <TextView
+        android:id="@+id/instalment_amount"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_50"
+        app:layout_constraintStart_toEndOf="@+id/instalment"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/dp_18"
+        app:layout_constraintTop_toTopOf="@+id/instalment"
+        android:text=""
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/black"
+        android:gravity="center_vertical|right"/>
+
+    <TextView
+        android:id="@+id/transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50"
+        app:layout_constraintTop_toBottomOf="@id/instalment"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Transaction fee"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp_16"/>
+
+    <TextView
+        android:id="@+id/transaction_fee"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_50"
+        app:layout_constraintStart_toEndOf="@+id/transaction"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/dp_18"
+        app:layout_constraintTop_toTopOf="@+id/transaction"
+        android:text=""
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/black"
+        android:gravity="center_vertical|right"/>
+
+    <TextView
+        android:id="@+id/late"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50"
+        app:layout_constraintTop_toBottomOf="@id/transaction"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Late fee"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp_16"/>
+
+    <TextView
+        android:id="@+id/late_fee"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_50"
+        app:layout_constraintStart_toEndOf="@+id/late"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/dp_18"
+        app:layout_constraintTop_toTopOf="@+id/late"
+        android:text=""
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/black"
+        android:gravity="center_vertical|right"/>
+
+    <TextView
+        android:id="@+id/bank"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50"
+        app:layout_constraintTop_toBottomOf="@id/late"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Bank details"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp_16"/>
+
+    <TextView
+        android:id="@+id/bank_num"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_50"
+        app:layout_constraintStart_toEndOf="@+id/bank"
+        app:layout_constraintEnd_toStartOf="@+id/next"
+        android:layout_marginHorizontal="@dimen/dp_9"
+        app:layout_constraintTop_toTopOf="@+id/bank"
+        android:text=""
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/pay_text_gray"
+        android:gravity="center_vertical|right"/>
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="@dimen/dp_9"
+        android:layout_height="@dimen/dp_15"
+        android:src="@mipmap/next_c_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bank"
+        app:layout_constraintBottom_toBottomOf="@id/bank"
+        android:layout_marginRight="@dimen/dp_11"/>
+
+    <TextView
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CACED5"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/bank"/>
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/dp_16"/>
+
+    <TextView
+        android:id="@+id/total_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/total"
+        app:layout_constraintStart_toEndOf="@+id/total"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text=""
+        android:textSize="@dimen/sp_22"
+        android:textColor="@color/black"
+        android:gravity="right"
+        android:layout_marginHorizontal="@dimen/dp_18"/>
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/pay"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_width="@dimen/dp_302"
+        android:background="@mipmap/btn_green_img"
+        android:layout_height="@dimen/dp_85"
+        android:text=""
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#14A0A0A0"
+    tools:context=".activity.SelectBankCardActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="Select bank card"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/id_back"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="0dp"
+        android:scaleType="center"
+        android:src="@mipmap/back_b"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <com.home.glx.uwallet.selfview.DampingReboundNestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:fadingEdge="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pro_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_34"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView">
+
+                <CheckBox
+                    android:id="@+id/id_protocols_check"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_marginLeft="@dimen/dp_26"
+                    android:background="@drawable/check"
+                    android:button="@null"
+                    android:textColor="@color/text_black"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/id_protocol_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_21"
+                    android:layout_marginRight="@dimen/dp_32"
+                    android:lineSpacingExtra="4dp"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:text="I have read and agree to the terms of Pay Now Customer Application Form  and Application Form and Now Terms &amp; Conditions."
+                    android:textColor="@color/text_color2"
+                    android:textSize="11sp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/id_protocols_check"
+                    app:layout_constraintTop_toTopOf="@+id/id_protocols_check" />
+
+                <TextView
+                    android:id="@+id/id_protocol_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:text="Your above information is protected by PCI DSS scheme (Payment Card Industry Data Security Standard) provided by Lateral Payment Solutions Pty Ltd ACN 610 150 064."
+                    android:textColor="@color/text_color2"
+                    android:textSize="11sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--android:text="To continue, you agree to authorise Payo Funds Pty Ltd ACN 638 179 567 and its associated party, to debit the nominated bank (card) account outlined above."-->
+
+            <TextView
+                android:id="@+id/next"
+                android:layout_width="@dimen/dp_302"
+                android:layout_height="@dimen/dp_77"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@mipmap/btn_orange_save"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pro_cl" />
+
+            <TextView
+                android:id="@+id/gray_btn"
+                android:layout_width="@dimen/dp_302"
+                android:layout_height="@dimen/dp_77"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@mipmap/btn_gray_save_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pro_cl" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.home.glx.uwallet.selfview.DampingReboundNestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

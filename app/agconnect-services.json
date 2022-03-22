@@ -1,0 +1,14 @@
+{
+  "client":{
+    "appType":"1",
+    "cp_id":"890061000023000545",
+    "product_id":"736430079244654788",
+    "client_id":"462907175430259904",
+    "client_secret":"E635A919A58F0AFEBB81CB9548D63D2ABF18BF7F564022B37BFB39BBAAB6BD82",
+    "project_id":"736430079244654788",
+    "app_id":"102996149",
+    "api_key":"CgB6e3x9s/WsqDT7lGQkn+TmOTDfm97b+qryXe1wR0sZB5vboYHhSDaMt75OliiIjwC/pVj8yEr6E/KJeLl2hMTD",
+    "package_name":"com.home.glx.uwallet"
+  },
+  "configuration_version":"1.0"
+}

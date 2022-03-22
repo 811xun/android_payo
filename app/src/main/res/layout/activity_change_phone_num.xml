@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.ChangePhoneNumActivity">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:scaleType="center"
+        android:src="@mipmap/back_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:text="Change phone number"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/enter_pin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <TextView
+            android:id="@+id/pin_digit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_40"
+            android:text="Please type in your 4 digit PIN"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--       <com.home.glx.uwallet.tools.PwdEditText_6digital-->
+        <com.home.glx.uwallet.selfview.PwdEditText_Fenkai
+            android:id="@+id/id_pws_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="86dp"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginRight="86dp"
+            android:digits="0123456789"
+            android:inputType="number"
+            app:backColor="@color/white"
+            app:checkedColor="#d0d0d0"
+            app:isWaitInput="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pin_digit"
+            app:round="7.5dp"
+            app:space="0dp"
+            app:textColor="#717171"
+            app:textLength="4"
+            app:waitInputColor="#707070">
+
+            <requestFocus />
+        </com.home.glx.uwallet.selfview.PwdEditText_Fenkai>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/enter_phone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <EditText
+            android:id="@+id/id_input_edt"
+            style="@style/edt"
+            android:layout_marginHorizontal="@dimen/dp_24"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:maxLength="10"
+            android:paddingLeft="@dimen/dp_20"
+            android:text=""
+            android:layout_marginTop="@dimen/dp_3"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hint" />
+
+        <ImageView
+            android:id="@+id/choose_img"
+            android:layout_width="@dimen/dp_15"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:src="@mipmap/choose_black_icon"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/id_input_edt"
+            app:layout_constraintStart_toEndOf="@+id/id_country_code"
+            app:layout_constraintTop_toTopOf="@+id/id_input_edt" />
+
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_19"
+            android:text="Type in your new phone number"
+            app:layout_constraintStart_toStartOf="@+id/id_input_edt"
+            android:layout_marginBottom="@dimen/dp_3"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/id_country_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_marginTop="@dimen/dp_9"
+            android:gravity="center"
+            android:text="+61"
+            android:textColor="@color/black"
+
+            android:textSize="@dimen/sp_18"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/id_input_edt"
+            app:layout_constraintStart_toStartOf="@+id/id_input_edt"
+            app:layout_constraintTop_toTopOf="@+id/id_input_edt" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/id_input_edt"
+            app:layout_constraintStart_toEndOf="@+id/choose_img"
+            app:layout_constraintTop_toTopOf="@+id/id_input_edt" />
+
+        <TextView
+            android:id="@+id/next"
+            android:layout_width="@dimen/dp_313"
+            android:layout_height="@dimen/dp_85"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_40"
+            android:background="@mipmap/btn_orange_img"
+            android:gravity="center"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_input_edt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/enter_code"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <Button
+            android:id="@+id/send"
+            style="@style/btn"
+            android:layout_marginTop="@dimen/dp_60"
+            android:text="Send verification number"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verfy_text" />
+
+        <!--
+                <com.home.glx.uwallet.tools.PwdEditText_6digital
+        -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_33"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_code_edt">
+
+            <TextView
+                android:id="@+id/send_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resend code"
+                android:textColor="#707070"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/times"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/verfy_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="Please verify your phone."
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_code_edt" />
+
+        <TextView
+            android:id="@+id/code_digit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_47"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:text="Please enter 6 digit code sent to your new phone number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.home.glx.uwallet.selfview.PwdEditText_Fenkai
+            android:id="@+id/id_code_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginRight="40dp"
+            android:digits="0123456789"
+            android:inputType="number"
+            app:backColor="@color/white"
+            app:checkedColor="#d0d0d0"
+            app:isWaitInput="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/code_digit"
+            app:round="0dp"
+            app:space="0dp"
+            app:textColor="#717171"
+
+            app:textLength="6"
+            app:waitInputColor="#707070"></com.home.glx.uwallet.selfview.PwdEditText_Fenkai>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

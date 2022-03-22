@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/id_close"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:scaleType="center"
+            android:src="@mipmap/back_b" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/input_pin_code"
+            android:textColor="@color/text_black"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/pin_digit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_120"
+        android:text="Please type in your 4 digit PIN"
+        android:textColor="@color/pay_text_gray"
+        android:textSize="@dimen/sp_17" />
+
+    <com.home.glx.uwallet.selfview.PwdEditText_Fenkai
+        android:id="@+id/id_pws_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="84dp"
+        android:layout_marginBottom="40dp"
+        android:digits="0123456789"
+        android:inputType="number"
+        app:backColor="@color/white"
+        app:checkedColor="#d0d0d0"
+        app:isWaitInput="true"
+        app:round="7.5dp"
+        app:space="0dp"
+        app:textColor="#717171"
+        app:textLength="4"
+        app:waitInputColor="#707070" >
+        <requestFocus/>
+    </com.home.glx.uwallet.selfview.PwdEditText_Fenkai>
+
+</LinearLayout>

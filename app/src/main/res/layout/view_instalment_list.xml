@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="@dimen/sp_23"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_40"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date"
+        android:divider="#00000000" />
+
+    <TextView
+        android:id="@+id/pay_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_15"
+        android:text=""
+        android:textColor="@color/colorBackGround"
+        app:layout_constraintStart_toStartOf="@+id/date"
+        app:layout_constraintTop_toBottomOf="@+id/list"
+        android:layout_marginTop="@dimen/dp_22"/>
+
+    <ImageView
+        android:id="@+id/iv_right"
+        android:layout_width="@dimen/dp_19"
+        android:layout_height="@dimen/dp_24"
+        android:src="@mipmap/next_c_icon"
+        app:layout_constraintStart_toEndOf="@+id/pay_all"
+        app:layout_constraintTop_toTopOf="@+id/pay_all"
+        app:layout_constraintBottom_toBottomOf="@+id/pay_all"
+        android:padding="@dimen/dp_6"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF5E00">
+
+    <RelativeLayout
+        android:id="@+id/guide1"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/cir_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/msg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:src="@mipmap/guide_cir_first" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="337dp"
+            android:layout_below="@+id/cir_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="54dp"
+            android:src="@mipmap/new_guide_first" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:text="Instant use"
+            android:textColor="@color/white"
+            android:textSize="38sp" />
+
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:text="Get up to $1000 credit limit instantly \napproved and enjoy your meal\n (T&amp;C applies)"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/guide2"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/msg2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:src="@mipmap/guide_cir_second" />
+
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="169dp"
+            android:layout_height="337dp"
+            android:layout_below="@+id/msg2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:src="@mipmap/new_guide_second" />
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:text="Quick &amp; Easy"
+            android:textColor="@color/white"
+            android:textSize="38sp"
+
+            />
+
+        <TextView
+            android:id="@+id/msg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:text="Scan or tap to pay"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_below="@+id/iv2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp_23"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="@dimen/dp_23"
+            android:background="@mipmap/guide_start_btn"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.home.glx.uwallet.datas.TranstationItemData" />
+
+        <variable
+            name="item"
+            type="TranstationItemData" />
+
+        <import type="com.home.glx.uwallet.adapter.list_adapter.ItemClickHandler" />
+
+        <variable
+            name="itemClick"
+            type="ItemClickHandler" />
+
+    </data>
+<LinearLayout
+    android:layout_marginTop="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:background="@color/bj">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+        android:paddingHorizontal="6dp"
+        android:paddingTop="16dp"
+        android:background="@drawable/view_18white">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/img_bg"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="11dp">
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:scaleType="center"
+                app:imageUrl="@{item.logoUrl}"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/merchant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/img_bg"
+            android:layout_toLeftOf="@+id/pay_amount"
+            android:textStyle="bold"
+            android:text="@{item.tradingName}"
+            android:singleLine="true"
+            android:textColor="#322B1E"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.displayDate}"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:layout_alignLeft="@+id/merchant_name"
+            android:layout_below="@+id/merchant_name"
+            android:layout_marginTop="6dp"/>
+        <View
+            android:id="@+id/point"
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/time"
+            android:layout_alignTop="@+id/time"
+            android:background="@drawable/gray_point"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.transTypeStr}"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/point"
+            android:layout_alignTop="@+id/time"/>
+
+        <View
+            android:id="@+id/staus_point"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginTop="9dp"
+            android:layout_alignLeft="@+id/merchant_name"
+            android:layout_below="@+id/time"
+            app:point="@{item.drawable}" />
+
+        <TextView
+            android:id="@+id/staus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.transStateStr}"
+            app:stausTextColor="@{item.drawable}"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/staus_point"
+            android:layout_below="@+id/time"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="6dp"
+            android:layout_below="@+id/staus"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:onClick="@{()->itemClick.itemClick(item,1)}"
+                android:background="@drawable/white_btn_shadow"
+                android:text="Delete"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:text="Detall"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:onClick="@{()->itemClick.itemClick(item,2)}"
+                android:background="@drawable/orange_btn_shadow"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/pay_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.payAmount}"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:textColor="#FE724C"
+            android:layout_marginTop="4dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>
+</layout>

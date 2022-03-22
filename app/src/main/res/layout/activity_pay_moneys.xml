@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:text="Payment"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/id_back"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="0dp"
+        android:scaleType="center"
+        android:src="@mipmap/back_b"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.home.glx.uwallet.selfview.DampingReboundNestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="1:0.43"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@mipmap/info_backgroudn_color"
+                android:paddingBottom="@dimen/dp_50"
+                app:layout_constraintBottom_toBottomOf="@+id/logo"
+                app:layout_constraintDimensionRatio="1:0.43"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/limit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text=""
+                android:textColor="#FD7441"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+            <TextView
+                android:id="@+id/merchant_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="@dimen/dp_12"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/limit" />
+
+            <TextView
+                android:id="@+id/merchant_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="@dimen/dp_12"
+                android:text=""
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/merchant_name" />
+
+            <LinearLayout
+                android:id="@+id/pay_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@drawable/view_10white"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/merchant_location">
+
+                <TextView
+                    android:id="@+id/order_text_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:text="Order Amount"
+                    android:textColor="#31281E"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/enter_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:background="@drawable/view_yj_m8gray">
+
+                    <TextView
+                        android:id="@+id/money_mark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        android:text="$"
+                        android:textColor="@color/pay_text_gray"
+                        android:textSize="@dimen/sp_18"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/id_pos_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toLeftOf="@+id/id_clear_input"
+                        android:layout_toRightOf="@+id/money_mark"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/pay_text_gray"
+                        android:textSize="@dimen/sp_15"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/id_order_amount"
+                        style="@style/edt_no_background_padding"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_48"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="-3dp"
+                        android:layout_toLeftOf="@+id/id_clear_input"
+                        android:layout_toRightOf="@+id/money_mark"
+                        android:hint="Enter amount"
+                        android:inputType="number|numberDecimal"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="#CACED5"
+                        android:textSize="@dimen/sp_15" />
+
+                    <ImageView
+                        android:id="@+id/id_clear_input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:src="@mipmap/clear_input"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="@dimen/dp_30"
+                android:text="Payment Method"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pay_ll" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/select_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/method">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/instal_old_no_bank"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <!--android:visibility="gone"-->
+
+                    <TextView
+                        android:id="@+id/old_instalment1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_64"
+                        android:background="@drawable/view_btn_4gray"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/old_instalment_text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_26"
+                        android:text="Please add a bank card to pay\nin 4 with Payo instalment"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintBottom_toBottomOf="@+id/old_instalment1"
+                        app:layout_constraintStart_toEndOf="@+id/old_instalment_logo1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/old_instalment_logo1"
+                        android:layout_width="@dimen/dp_67"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginLeft="@dimen/dp_13"
+                        android:src="@mipmap/payo_black_logo"
+                        app:layout_constraintBottom_toBottomOf="@+id/old_instalment1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/old_instalment_bank"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_64"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:background="@drawable/view_yj_m4hui"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#A0A0A0"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/old_instalment1" />
+
+                    <TextView
+                        android:id="@+id/old_add_card_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_14"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="Add bank card"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_16"
+                        app:layout_constraintStart_toEndOf="@+id/old_select_bank_icon"
+                        app:layout_constraintTop_toTopOf="@id/old_instalment_bank" />
+
+                    <TextView
+                        android:id="@+id/old_pay_full"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_14"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:text="Pay in full with your bank card"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintStart_toEndOf="@+id/old_select_bank_icon"
+                        app:layout_constraintTop_toBottomOf="@id/old_add_card_text" />
+
+                    <ImageView
+                        android:id="@+id/old_select_bank_icon"
+                        android:layout_width="@dimen/dp_41"
+                        android:layout_height="@dimen/dp_29"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:src="@mipmap/pay_later_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/old_instalment_bank"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/old_instalment_bank" />
+
+                    <ImageView
+                        android:id="@+id/old_instalment_choice_icon1"
+                        android:layout_width="@dimen/dp_9"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:src="@mipmap/next_c_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/old_instalment_bank"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/old_instalment_bank" />
+
+                    <TextView
+                        android:id="@+id/old_discount_bank_flag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:text=""
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/old_instalment_bank"
+                        app:layout_constraintEnd_toStartOf="@+id/old_instalment_choice_icon1"
+                        app:layout_constraintTop_toTopOf="@+id/old_instalment_bank" />
+
+                    <TextView
+                        android:id="@+id/why_add1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_13"
+                        android:text="Why do I have to add a bank card?"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintEnd_toEndOf="@+id/old_instalment_bank"
+                        app:layout_constraintTop_toBottomOf="@+id/old_instalment_bank" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/instal_old"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/old_instalment"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_64"
+                        android:background="@drawable/view_btn_4gray"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/old_instalment_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_26"
+                        android:text="Please add a bank card to pay\nin 4 with Payo instalment"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintBottom_toBottomOf="@+id/old_instalment"
+                        app:layout_constraintStart_toEndOf="@+id/old_instalment_logo"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/old_instalment_logo"
+                        android:layout_width="@dimen/dp_67"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginLeft="@dimen/dp_13"
+                        android:src="@mipmap/payo_black_logo"
+                        app:layout_constraintBottom_toBottomOf="@+id/old_instalment"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/old_bank"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_64"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:background="@drawable/view_yj_m4hui"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#A0A0A0"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/old_instalment" />
+
+                    <TextView
+                        android:id="@+id/old_bank_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pay now with your\ncredit/debit card"
+                        android:textColor="#A0A0A0"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintBottom_toBottomOf="@+id/old_bank"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/old_bank" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_95"
+                        android:layout_height="@dimen/dp_27"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:src="@mipmap/three_bank_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/old_bank"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/old_bank" />
+
+                    <ImageView
+                        android:id="@+id/old_choice_icon1"
+                        android:layout_width="@dimen/dp_22"
+                        android:layout_height="@dimen/dp_22"
+                        android:layout_marginRight="@dimen/dp_11"
+                        android:src="@mipmap/pay_unchoice_icon"
+                        android:tag="false"
+                        app:layout_constraintBottom_toBottomOf="@+id/old_bank"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/old_bank" />
+
+                    <TextView
+                        android:id="@+id/old_discount_flag1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:text=""
+                        android:textColor="#A0A0A0"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/old_bank"
+                        app:layout_constraintEnd_toStartOf="@+id/old_choice_icon1"
+                        app:layout_constraintTop_toTopOf="@+id/old_bank" />
+
+
+                    <TextView
+                        android:id="@+id/why_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_13"
+                        android:text="Why do I have to add a bank card?"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintEnd_toEndOf="@+id/old_bank"
+                        app:layout_constraintTop_toBottomOf="@+id/old_bank" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/have_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/two_instalment"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_64"
+                        android:background="@drawable/view_btn_4orange"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/two_instalment_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pay later in up to\n4 instalments"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintBottom_toBottomOf="@+id/two_instalment"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/two_instalment_logo"
+                        android:layout_width="@dimen/dp_67"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginLeft="@dimen/dp_13"
+                        android:src="@mipmap/payo_logo"
+                        app:layout_constraintBottom_toBottomOf="@+id/two_instalment"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/choice_icon"
+                        android:layout_width="@dimen/dp_22"
+                        android:layout_height="@dimen/dp_22"
+                        android:layout_marginRight="@dimen/dp_11"
+                        android:src="@mipmap/pay_choice_on"
+                        android:tag="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/two_instalment"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/discount_flag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/two_instalment"
+                        app:layout_constraintEnd_toStartOf="@+id/choice_icon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/two_bank"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_64"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:background="@drawable/view_yj_m4hui"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#A0A0A0"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/two_instalment" />
+
+                    <TextView
+                        android:id="@+id/two_bank_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pay now with your\ncredit/debit card"
+                        android:textColor="#A0A0A0"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintBottom_toBottomOf="@+id/two_bank"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/two_bank" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_95"
+                        android:layout_height="@dimen/dp_27"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:src="@mipmap/three_bank_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/two_bank"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/two_bank" />
+
+                    <ImageView
+                        android:id="@+id/choice_icon1"
+                        android:layout_width="@dimen/dp_22"
+                        android:layout_height="@dimen/dp_22"
+                        android:layout_marginRight="@dimen/dp_11"
+                        android:src="@mipmap/pay_unchoice_icon"
+                        android:tag="false"
+                        app:layout_constraintBottom_toBottomOf="@+id/two_bank"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/two_bank" />
+
+                    <TextView
+                        android:id="@+id/discount_flag1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:text=""
+                        android:textColor="#A0A0A0"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/two_bank"
+                        app:layout_constraintEnd_toStartOf="@+id/choice_icon1"
+                        app:layout_constraintTop_toTopOf="@+id/two_bank" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/have_instalment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/instalment_instalment"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_64"
+                        android:background="@drawable/view_btn_4orange"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/pay_in_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pay later in up to\n4 instalments"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintBottom_toBottomOf="@+id/instalment_instalment"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_67"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginLeft="@dimen/dp_13"
+                        android:src="@mipmap/payo_logo"
+                        app:layout_constraintBottom_toBottomOf="@+id/instalment_instalment"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/instalment_choice_icon"
+                        android:layout_width="@dimen/dp_22"
+                        android:layout_height="@dimen/dp_22"
+                        android:layout_marginRight="@dimen/dp_11"
+                        android:src="@mipmap/pay_choice_on"
+                        app:layout_constraintBottom_toBottomOf="@+id/instalment_instalment"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/discount1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/instalment_instalment"
+                        app:layout_constraintEnd_toStartOf="@+id/instalment_choice_icon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/instalment_bank"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_64"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:background="@drawable/view_yj_m4hui"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#A0A0A0"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/instalment_instalment" />
+
+                    <TextView
+                        android:id="@+id/add_card_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_14"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="Add bank card"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_16"
+                        app:layout_constraintStart_toEndOf="@+id/select_bank_icon"
+                        app:layout_constraintTop_toTopOf="@id/instalment_bank" />
+
+                    <TextView
+                        android:id="@+id/pay_full"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_14"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:text="Pay in full with your bank card"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintStart_toEndOf="@+id/select_bank_icon"
+                        app:layout_constraintTop_toBottomOf="@id/add_card_text" />
+
+                    <ImageView
+                        android:id="@+id/select_bank_icon"
+                        android:layout_width="@dimen/dp_41"
+                        android:layout_height="@dimen/dp_29"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:src="@mipmap/pay_later_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/instalment_bank"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/instalment_bank" />
+
+                    <ImageView
+                        android:id="@+id/instalment_choice_icon1"
+                        android:layout_width="@dimen/dp_9"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:src="@mipmap/next_c_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/instalment_bank"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/instalment_bank" />
+
+                    <TextView
+                        android:id="@+id/discount_bank_flag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:text=""
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/instalment_bank"
+                        app:layout_constraintEnd_toStartOf="@+id/instalment_choice_icon1"
+                        app:layout_constraintTop_toTopOf="@+id/instalment_bank" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/have_bank"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/bank_instalment"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_64"
+                        android:background="@drawable/view_yj_m4hui"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/aplly_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_14"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:text="Pay in 4 with Payo"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_16"
+                        app:layout_constraintStart_toEndOf="@+id/select_ins_icon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/eat_now_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_14"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:text="Eat Now, Pay later."
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintStart_toEndOf="@+id/select_ins_icon"
+                        app:layout_constraintTop_toBottomOf="@+id/aplly_text" />
+
+                    <ImageView
+                        android:id="@+id/select_ins_icon"
+                        android:layout_width="@dimen/dp_41"
+                        android:layout_height="@dimen/dp_29"
+                        android:layout_marginLeft="@dimen/dp_13"
+                        android:src="@mipmap/select_bank_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/bank_instalment"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/bank_choice_icon"
+                        android:layout_width="@dimen/dp_9"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_11"
+                        android:src="@mipmap/next_c_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/bank_instalment"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/discount_instal_flag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:text=""
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/bank_instalment"
+                        app:layout_constraintEnd_toStartOf="@+id/bank_choice_icon"
+                        app:layout_constraintTop_toTopOf="@+id/bank_instalment" />
+
+                    <TextView
+                        android:id="@+id/bank_bank"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_64"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:background="@drawable/view_btn_4orange"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#A0A0A0"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/bank_instalment" />
+
+                    <TextView
+                        android:id="@+id/pay_now_with_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pay now with your\ncredit/debit card"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintBottom_toBottomOf="@+id/bank_bank"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/bank_bank" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_95"
+                        android:layout_height="@dimen/dp_27"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:src="@mipmap/three_bank_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/bank_bank"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/bank_bank" />
+
+                    <ImageView
+                        android:id="@+id/bank_choice_icon1"
+                        android:layout_width="@dimen/dp_22"
+                        android:layout_height="@dimen/dp_22"
+                        android:layout_marginRight="@dimen/dp_11"
+                        android:src="@mipmap/pay_choice_on"
+                        app:layout_constraintBottom_toBottomOf="@+id/bank_bank"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/bank_bank" />
+
+                    <TextView
+                        android:id="@+id/discount2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/bank_bank"
+                        app:layout_constraintEnd_toStartOf="@+id/bank_choice_icon1"
+                        app:layout_constraintTop_toTopOf="@+id/bank_bank" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/have_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/no_instalment"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_64"
+                        android:background="@drawable/view_yj_m4hui"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/apply_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_14"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:text="Pay in 4 with Payo"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_16"
+                        app:layout_constraintStart_toEndOf="@+id/no_ins_icon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/no_ins_eat_now"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_14"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:text="Eat Now, Pay later."
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintStart_toEndOf="@+id/no_ins_icon"
+                        app:layout_constraintTop_toBottomOf="@+id/apply_text" />
+
+                    <ImageView
+                        android:id="@+id/no_ins_icon"
+                        android:layout_width="@dimen/dp_41"
+                        android:layout_height="@dimen/dp_29"
+                        android:layout_marginLeft="@dimen/dp_13"
+                        android:src="@mipmap/select_bank_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/no_instalment"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/no_choice_icon"
+                        android:layout_width="@dimen/dp_9"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:src="@mipmap/next_c_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/no_instalment"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/discount_instal_flag1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:text=""
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/no_instalment"
+                        app:layout_constraintEnd_toStartOf="@+id/no_choice_icon"
+                        app:layout_constraintTop_toTopOf="@+id/no_instalment" />
+
+                    <TextView
+                        android:id="@+id/no_bank"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_64"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:background="@drawable/view_yj_m4hui"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#A0A0A0"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/no_instalment" />
+
+                    <TextView
+                        android:id="@+id/no_add_card_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_14"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="Add bank card"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_16"
+                        app:layout_constraintStart_toEndOf="@+id/no_select_bank_icon"
+                        app:layout_constraintTop_toTopOf="@id/no_bank" />
+
+                    <TextView
+                        android:id="@+id/no_add_card_full"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_14"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:text="Pay in full with your bank card"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintStart_toEndOf="@+id/no_select_bank_icon"
+                        app:layout_constraintTop_toBottomOf="@id/no_add_card_text" />
+
+                    <ImageView
+                        android:id="@+id/no_select_bank_icon"
+                        android:layout_width="@dimen/dp_41"
+                        android:layout_height="@dimen/dp_29"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:src="@mipmap/pay_later_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/no_bank"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/no_bank" />
+
+                    <ImageView
+                        android:id="@+id/no_choice_icon1"
+                        android:layout_width="@dimen/dp_9"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:src="@mipmap/next_c_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/no_bank"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/no_bank" />
+
+                    <TextView
+                        android:id="@+id/discount_bank_flag1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:text=""
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/no_bank"
+                        app:layout_constraintEnd_toStartOf="@+id/no_choice_icon1"
+                        app:layout_constraintTop_toTopOf="@+id/no_bank" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/no_pay"
+                android:layout_width="@dimen/dp_272"
+                android:layout_height="@dimen/dp_47"
+                android:layout_marginTop="@dimen/dp_40"
+                android:background="@drawable/btn_unclick_background"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/select_pay" />
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="@dimen/dp_60"
+                android:layout_marginRight="24dp"
+                android:background="@mipmap/btn_orange_jianbian"
+                android:gravity="center"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/select_pay" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.home.glx.uwallet.selfview.DampingReboundNestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

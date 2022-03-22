@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SeparatedEditText">
+        <attr name="p_password" format="boolean" />
+        <attr name="p_showCursor" format="boolean" />
+        <attr name="p_separateType" format="reference|integer" />
+        <attr name="p_maxLength" format="integer" />
+        <attr name="p_corner" format="dimension" />
+        <attr name="p_borderColor" format="color|reference" />
+        <attr name="p_blockColor" format="color|reference" />
+        <attr name="p_textColor" format="color|reference" />
+        <attr name="p_blockSpacing" format="dimension" />
+        <attr name="p_cursorDuration" format="integer" />
+        <attr name="p_cursorWidth" format="dimension" />
+        <attr name="p_cursorColor" format="color|reference" />
+        <attr name="p_borderWidth" format="dimension" />
+    </declare-styleable>
+
+    <!--画虚线-->
+    <declare-styleable name="DashView">
+        <attr name="dashWidth" format="dimension"/>
+        <attr name="lineWidth" format="dimension"/>
+        <attr name="lineHeight" format="dimension"/>
+        <attr name="lineColor" format="color"/>
+        <attr name="dashOrientation" format="integer"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="AlignTextView">
+        <attr name="align">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="SwitchView">
+        <attr name="hasShadow" format="boolean"/>
+        <attr name="primaryColor" format="color"/>
+        <attr name="primaryColorDark" format="color"/>
+        <attr name="offColor" format="color"/>
+        <attr name="offColorDark" format="color"/>
+        <attr name="barColor" format="color"/>
+        <attr name="bgColor" format="color"/>
+        <attr name="shadowColor" format="color"/>
+        <attr name="ratioAspect" format="float"/>
+        <attr name="isOpened" format="boolean"/>
+    </declare-styleable>
+</resources>

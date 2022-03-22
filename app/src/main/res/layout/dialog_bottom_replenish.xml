@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:background="@color/bj"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:paddingHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black"
+            android:text="Account Holder"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/id_account_name"
+            style="@style/edt"
+            android:layout_marginTop="10dp"
+            android:hint="Account Holder"
+            android:maxLength="100"
+            android:maxLines="1"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black"
+            android:text="Bank Name"
+            android:textSize="14sp" />
+
+ <!--       <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/view_yj_m8hui"
+            android:paddingRight="10dp">-->
+
+            <TextView
+                android:background="@drawable/view_yj_m8hui"
+                android:id="@+id/id_choice_account_bank_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/bank_name"
+                android:maxLength="100"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:drawableEnd="@mipmap/xnext_icon"
+                android:textColor="@color/text_black" />
+
+        <!--   <ImageView style="@style/xnext" />
+
+      </RelativeLayout>-->
+
+        <EditText
+            android:id="@+id/id_account_bank_name"
+            style="@style/edt"
+            android:layout_marginTop="10dp"
+            android:hint="@string/bank_name"
+            android:maxLength="100"
+            android:maxLines="1"
+            android:textColor="@color/text_black"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black"
+            android:text="BSB"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/id_account_bsb"
+            style="@style/edt"
+            android:layout_marginTop="10dp"
+            android:hint="@string/bsb"
+            android:inputType="number"
+            android:maxLength="6"
+            android:maxLines="1"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black"
+            android:text="Account Number"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/id_account_account"
+            style="@style/edt"
+            android:layout_marginTop="10dp"
+            android:hint="@string/bank_card_account"
+            android:inputType="number"
+            android:maxLength="9"
+            android:maxLines="1"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black"
+            android:text="Email"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/id_account_email"
+            style="@style/edt"
+            android:layout_marginTop="10dp"
+            android:hint="@string/z_email"
+            android:textColor="@color/text_black" />
+
+        <EditText
+            style="@style/edt"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:hint="@string/bank_address"
+            android:maxLines="1"
+            android:textColor="@color/text_black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <EditText
+                style="@style/edt"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:hint="@string/city"
+                android:maxLines="1"
+                android:textColor="@color/text_black" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/view_yj_m8hui"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/zhou"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/text_black" />
+
+
+                <ImageView style="@style/xnext" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/edt"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/australia"
+                android:textColor="@color/text_gray" />
+
+            <EditText
+                style="@style/edt"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:hint="@string/postcode"
+                android:inputType="number"
+                android:maxLength="4"
+                android:maxLines="1" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/id_protocol"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/check"
+                android:button="@null"
+                android:textColor="@color/text_black" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/suo"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/id_protocol_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="2dp"
+                android:gravity="center_vertical"
+                android:text="@string/add_bank_account_check_new"
+                android:textColor="@color/text_gray" />
+
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/split_html"
+            android:layout_marginLeft="33dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/orange_line"
+            android:textColor="@color/text_orange"
+            android:text="Direct Debit Terms and Conditions"
+            android:textStyle="italic"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="&#060;Direct Debit Request Service Agreement&#062;"
+            android:textColor="@color/text_orange"
+            android:visibility="gone" />
+
+
+        <com.mxy.fpshadowlayout.FpShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            app:fp_round_corner="fp_corner_leftBottom|fp_corner_rightBottom"
+            app:fp_shadowColor="@color/btn_yy"
+            app:fp_shadowRadius="6dp"
+            app:fp_shadowRoundRadius="26dp"
+            app:fp_shadowShape="fp_round_rectangle"
+            app:fp_shadowSide="fp_bottom">
+
+            <Button
+                android:id="@+id/id_add_bank"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/view_yj_cheng"
+                android:text="Confirm"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </com.mxy.fpshadowlayout.FpShadowLayout>
+    </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

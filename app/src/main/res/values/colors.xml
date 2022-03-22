@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="huise">#CACED5</color>
+    <color name="orange1">#FF5E00</color>
+    <color name="no_color">#00000000</color>
+    <color name="share_text_gray">#999999</color>
+    <color name="end_orange">#FD7441</color>
+    <color name="colorBackGround">#FD7441</color>
+    <color name="ffColorBackGround">#FFFE7644</color>
+    <color name="colorPrimary">#FE7644</color>
+    <color name="red">#FF0000</color>
+    <color name="read">#FF8282</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_717171">#717171</color>
+    <color name="color_c9c9c9">#C9C9C9</color>
+    <color name="color_f8f8f8">#F8F8F8</color>
+
+    <color name="lightGrey">#d3d3d3</color>
+
+    <color name="text_gray">#7F000000</color>
+    <color name="text_black">#000000</color>
+    <color name="text_orange">#FD7441</color>
+    <color name="text_gray3">#959BA4</color>
+    <color name="qhui">#D5D5D5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="pay_text_gray">#A0A0A0</color>
+    <color name="pink">#FDF2EB</color>
+    <color name="bj">#F3F3F3</color>
+    <color name="null_color">#00F3F3F3</color>
+    <color name="green">#008080</color>
+    <color name="greenPoint">#4EE476</color>
+    <color name="grayPoint">#FFC4C4C4</color>
+    <color name="color_ebebeb">#EBEBEB</color>
+    <color name="color_45b9d5">#45b9d5</color>
+    <color name="color_c9dd00">#c9dd00</color>
+    <color name="color_268656">#268656</color>
+
+    <color name="btn_yy">#F7C2A9</color>
+    <color name="text_color2">#99000000</color>
+    <color name="text_color5">#dd000000</color>
+    <color name="black">#000000</color>
+    <!--通讯录slidebar颜色-->
+
+</resources>
